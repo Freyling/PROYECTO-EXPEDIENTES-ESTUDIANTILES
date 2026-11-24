@@ -1,0 +1,11 @@
+GT10 - Dashboard visual fase 2
+
+1. Descomprimir y abrir sistema-expedientes en VS Code.
+2. Abrir views/index.html mediante Live Server e iniciar sesión.
+3. Entrar al Dashboard.
+
+Cambios: views/dashboard.html y nuevos archivos public/css/gt10-dashboard-premium.css y public/js/gt10-dashboard-visual.js.
+Los otros módulos y la integración Firebase no se han alterado.
+Los gráficos leen datos actuales de localStorage; no son predicciones.
+Si el módulo de estudiantes utiliza Firestore, el panel seguirá mostrando los datos locales disponibles hasta integrar una fuente unificada.
+Conservar la versión anterior como respaldo.

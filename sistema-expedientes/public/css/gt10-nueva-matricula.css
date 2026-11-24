@@ -1,0 +1,181 @@
+
+/* ==========================================
+   GT10 - NUEVA MATRÍCULA
+========================================== */
+
+/* Encabezado */
+
+.student-page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.student-page-heading .btn-outline-secondary {
+    position: relative;
+    z-index: 2;
+    padding: 12px 22px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 12px;
+    background: rgba(255,255,255,.15);
+    color: white;
+    font-weight: 600;
+}
+
+.student-page-heading .btn-outline-secondary:hover {
+    background: white;
+    color: #5142d4;
+}
+
+/* Panel principal */
+
+.dashboard-content > .dashboard-panel {
+    padding: 32px;
+    border: 1px solid #e8edf5;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 12px 35px rgba(30,41,90,.06);
+}
+
+/* Secciones */
+
+#enrollmentForm h5 {
+    color: #172554;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+#enrollmentForm h5 i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px !important;
+    border-radius: 14px;
+    background: #e9e7ff;
+    color: #6558f5;
+    font-size: 22px;
+}
+
+#enrollmentForm > div:nth-of-type(2) h5 i {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+#enrollmentForm .text-muted {
+    color: #64748b !important;
+    font-size: 14px;
+}
+
+#enrollmentForm hr {
+    border-color: #e2e8f0;
+    opacity: 1;
+}
+
+/* Etiquetas */
+
+#enrollmentForm .form-label {
+    margin-bottom: 9px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+/* Campos */
+
+#enrollmentForm .form-control,
+#enrollmentForm .form-select {
+    min-height: 49px;
+    padding: 11px 15px;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-size: 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+#enrollmentForm .form-control:focus,
+#enrollmentForm .form-select:focus {
+    background: white;
+    border-color: #6558f5;
+    box-shadow: 0 0 0 4px rgba(101,88,245,.1);
+}
+
+#enrollmentForm .form-control[readonly] {
+    background: #eef2f7;
+    color: #64748b;
+}
+
+#enrollmentForm textarea.form-control {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Botones */
+
+#enrollmentForm > .d-flex.justify-content-end {
+    padding-top: 18px;
+}
+
+#enrollmentForm .btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 650;
+}
+
+#enrollmentForm .btn-primary {
+    border: none;
+    background: linear-gradient(110deg,#6558f5,#3294ff);
+    box-shadow: 0 8px 20px rgba(101,88,245,.2);
+}
+
+#enrollmentForm .btn-primary:hover {
+    filter: brightness(1.07);
+}
+
+/* Menú plegable: misma solución que funciona
+   en Estudiantes y Matrículas */
+
+@media (min-width: 769px) {
+    body.dashboard-body.gt10-menu-hidden #gt10Sidebar {
+        transform: translateX(-110%) !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body.dashboard-body.gt10-menu-hidden .dashboard-main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.dashboard-body:not(.gt10-menu-hidden) #gt10Sidebar {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+}
+
+/* Adaptación móvil */
+
+@media (max-width: 768px) {
+    .dashboard-content > .dashboard-panel {
+        padding: 20px;
+    }
+
+    .student-page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #enrollmentForm > .d-flex.justify-content-end {
+        flex-direction: column;
+    }
+
+    #enrollmentForm > .d-flex.justify-content-end .btn {
+        width: 100%;
+    }
+}

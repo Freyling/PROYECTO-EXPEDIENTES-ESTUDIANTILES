@@ -1,0 +1,8 @@
+GT10 — Rediseño visual, fase 1
+
+Se ha actualizado únicamente el dashboard visual mediante public/css/gt10-visual.css y un enlace CSS en views/dashboard.html.
+Se conservan los módulos, archivos JavaScript, almacenamiento, permisos y conexión Firebase sin cambios.
+Para probar: abre el proyecto en Visual Studio Code y ejecuta como de costumbre mediante Live Server; entra al dashboard.
+Los contadores continúan usando las fuentes de datos originales; no se ha integrado todavía analítica predictiva.
+La fuente DM Sans/Outfit usa Google Fonts y requiere conexión; si no está disponible se usan fuentes locales.
+Se recomienda mantener el ZIP original como respaldo.

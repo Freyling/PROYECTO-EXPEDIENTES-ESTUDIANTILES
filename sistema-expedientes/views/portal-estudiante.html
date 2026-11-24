@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mi Portal | Sistema de Expedientes</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../public/css/styles.css"
+    >
+    <link rel="stylesheet" href="../public/css/gt10-visual.css">
+<link rel="stylesheet" href="../public/css/gt10-dashboard-premium.css">
+<link rel="stylesheet" href="../public/css/gt10-redesign.css">
+<link rel="stylesheet" href="../public/css/portal-estudiante.css">
+
+    
+
+</head>
+
+
+<body>
+
+    <!-- SIDEBAR DEL ESTUDIANTE -->
+   <aside class="student-portal-sidebar" id="studentPortalSidebar">
+
+        <div class="student-portal-brand">
+
+            <div class="student-portal-logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+                <h5>Sistema de</h5>
+                <span>Expedientes</span>
+            </div>
+
+        </div>
+
+
+        <div class="student-portal-label">
+            MI PORTAL
+        </div>
+
+
+        <nav class="student-portal-menu">
+
+            <a
+                href="#inicio"
+                class="student-portal-link active"
+                data-section="inicio"
+            >
+                <i class="bi bi-house-door-fill"></i>
+                Inicio
+            </a>
+
+            <a
+                href="#perfil"
+                class="student-portal-link"
+                data-section="perfil"
+            >
+                <i class="bi bi-person-fill"></i>
+                Mi perfil
+            </a>
+
+            <a
+                href="#expediente"
+                class="student-portal-link"
+                data-section="expediente"
+            >
+                <i class="bi bi-folder-fill"></i>
+                Mi expediente
+            </a>
+
+            <a
+                href="#asignaturas"
+                class="student-portal-link"
+                data-section="asignaturas"
+            >
+                <i class="bi bi-book-fill"></i>
+                Mis asignaturas
+            </a>
+
+            <a
+                href="#calificaciones"
+                class="student-portal-link"
+                data-section="calificaciones"
+            >
+                <i class="bi bi-clipboard-check-fill"></i>
+                Mis calificaciones
+            </a>
+
+            <a
+                href="#documentos"
+                class="student-portal-link"
+                data-section="documentos"
+            >
+                <i class="bi bi-file-earmark-text-fill"></i>
+                Mis documentos
+            </a>
+
+        </nav>
+
+
+        <div class="student-portal-footer">
+
+            <div class="student-portal-user">
+
+                <div
+                    class="student-portal-avatar"
+                    id="studentSidebarAvatar"
+                >
+                    E
+                </div>
+
+                <div class="student-portal-user-info">
+
+                    <strong id="studentSidebarName">
+                        Estudiante
+                    </strong>
+
+                    <span>
+                        Estudiante
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="student-portal-logout"
+                    id="studentLogoutButton"
+                    title="Cerrar sesión"
+                >
+                    <i class="bi bi-box-arrow-left"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+    <main class="student-portal-main">
+
+        
+<header class="student-portal-header">
+
+    <div class="d-flex align-items-center">
+
+        <button
+            type="button"
+            id="studentToggleSidebar"
+            class="gt10-sidebar-toggle"
+            aria-controls="studentPortalSidebar"
+            aria-expanded="true"
+            aria-label="Ocultar menú lateral"
+            title="Mostrar u ocultar menú"
+        >
+            <i class="bi bi-layout-sidebar-inset"></i>
+        </button>
+
+        <h5 id="studentHeaderTitle" class="mb-0">
+            Mi portal
+        </h5>
+
+    </div>
+
+    <div
+        class="student-portal-avatar"
+        id="studentHeaderAvatar"
+    >
+        E
+    </div>
+
+</header>
+
+
+
+        <div class="student-portal-content">
+
+
+            <!-- ==================================================
+                 INICIO
+            =================================================== -->
+            <section
+                id="section-inicio"
+                class="student-portal-section active"
+            >
+
+                <div class="student-welcome">
+
+                    <small>
+                        PORTAL ESTUDIANTIL
+                    </small>
+
+                    <h1 id="studentWelcome">
+                        Bienvenido
+                    </h1>
+
+                    <p>
+                        Consulta tu información académica y los
+                        documentos asociados a tu expediente.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-3 mb-4">
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="portal-card">
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-journal-check"></i>
+                                </div>
+
+                                <div>
+                                    <small class="text-muted">
+                                        Matrícula
+                                    </small>
+
+                                    <h5
+                                        class="mb-0"
+                                        id="studentEnrollmentStatus"
+                                    >
+                                        -
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="portal-card">
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-book-fill"></i>
+                                </div>
+
+                                <div>
+                                    <small class="text-muted">
+                                        Asignaturas
+                                    </small>
+
+                                    <h5
+                                        class="mb-0"
+                                        id="studentSubjectCount"
+                                    >
+                                        0
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="portal-card">
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-clipboard-check-fill"></i>
+                                </div>
+
+                                <div>
+                                    <small class="text-muted">
+                                        Calificaciones
+                                    </small>
+
+                                    <h5
+                                        class="mb-0"
+                                        id="studentGradeCount"
+                                    >
+                                        0
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="portal-card">
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-file-earmark-text-fill"></i>
+                                </div>
+
+                                <div>
+                                    <small class="text-muted">
+                                        Documentos
+                                    </small>
+
+                                    <h5
+                                        class="mb-0"
+                                        id="studentDocumentCount"
+                                    >
+                                        0
+                                    </h5>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4">
+
+                    <div class="col-lg-6">
+
+                        <div class="portal-card">
+
+                            <div class="portal-section-title">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                </div>
+
+                                <h5>
+                                    Matrícula actual
+                                </h5>
+
+                            </div>
+
+                            <div id="studentCurrentEnrollment">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-6">
+
+                        <div class="portal-card">
+
+                            <div class="portal-section-title">
+
+                                <div class="portal-stat-icon">
+                                    <i class="bi bi-person-badge-fill"></i>
+                                </div>
+
+                                <h5>
+                                    Información personal
+                                </h5>
+
+                            </div>
+
+                            <div id="studentQuickProfile">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 MI PERFIL
+            =================================================== -->
+            <section
+                id="section-perfil"
+                class="student-portal-section"
+            >
+
+                <div class="student-welcome">
+                    <small>INFORMACIÓN PERSONAL</small>
+                    <h1>Mi perfil</h1>
+                    <p>
+                        Información personal registrada en tu expediente.
+                    </p>
+                </div>
+
+                <div class="portal-card">
+                    <div
+                        class="row"
+                        id="studentProfileContent"
+                    >
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 MI EXPEDIENTE
+            =================================================== -->
+            <section
+                id="section-expediente"
+                class="student-portal-section"
+            >
+
+                <div class="student-welcome">
+                    <small>EXPEDIENTE DIGITAL</small>
+                    <h1>Mi expediente</h1>
+                    <p>
+                        Resumen de tu trayectoria académica registrada.
+                    </p>
+                </div>
+
+                <div id="studentRecordContent">
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 MIS ASIGNATURAS
+            =================================================== -->
+            <section
+                id="section-asignaturas"
+                class="student-portal-section"
+            >
+
+                <div class="student-welcome">
+                    <small>INFORMACIÓN ACADÉMICA</small>
+                    <h1>Mis asignaturas</h1>
+                    <p>
+                        Consulta las asignaturas asociadas a tu nivel académico.
+                    </p>
+                </div>
+
+                <div class="portal-card">
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Asignatura</th>
+                                    <th>Nivel / Grado</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="studentSubjectsBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div
+                        id="studentSubjectsEmpty"
+                        class="portal-empty d-none"
+                    >
+                        <i class="bi bi-book"></i>
+                        No hay asignaturas disponibles.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 MIS CALIFICACIONES
+            =================================================== -->
+            <section
+                id="section-calificaciones"
+                class="student-portal-section"
+            >
+
+                <div class="student-welcome">
+                    <small>RENDIMIENTO ACADÉMICO</small>
+                    <h1>Mis calificaciones</h1>
+                    <p>
+                        Consulta las calificaciones registradas en tu expediente.
+                    </p>
+                </div>
+
+                <div class="portal-card">
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Semestre</th>
+                                    <th>Asignatura</th>
+                                    <th>Evaluación</th>
+                                    <th>Nota</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="studentGradesBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div
+                        id="studentGradesEmpty"
+                        class="portal-empty d-none"
+                    >
+                        <i class="bi bi-clipboard-x"></i>
+                        No hay calificaciones registradas.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 MIS DOCUMENTOS
+            =================================================== -->
+            <section
+                id="section-documentos"
+                class="student-portal-section"
+            >
+
+                <div class="student-welcome">
+                    <small>DOCUMENTOS DIGITALES</small>
+                    <h1>Mis documentos</h1>
+                    <p>
+                        Consulta los documentos asociados a tu expediente.
+                    </p>
+                </div>
+
+                <div class="portal-card">
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+                                <tr>
+                                    <th>Documento</th>
+                                    <th>Tipo</th>
+                                    <th>Archivo</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="studentDocumentsBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <div
+                        id="studentDocumentsEmpty"
+                        class="portal-empty d-none"
+                    >
+                        <i class="bi bi-folder2-open"></i>
+                        No tienes documentos registrados.
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- IMPORTANTE:
+         El portal NO carga layout.js.
+         El estudiante tiene su propio menú.
+    -->
+    <script src="../public/js/auth.js"></script>
+    <script src="../public/js/portal-estudiante.js"></script>
+    <script src="../public/js/portal-estudiante-sidebar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+
+/* ==========================================
+   GT10 - REGISTRAR ESTUDIANTE
+========================================== */
+
+/* Encabezado del formulario */
+
+.student-page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.student-page-heading .btn-outline-secondary {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 12px 22px;
+    font-weight: 600;
+}
+
+.student-page-heading .btn-outline-secondary:hover {
+    background: white;
+    color: #5142d4;
+}
+
+/* Paneles del formulario */
+
+#studentForm .form-panel {
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 8px 28px rgba(30, 41, 90, 0.05);
+}
+
+#studentForm .form-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+#studentForm .form-section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: #e9e7ff;
+    color: #6558f5;
+    border-radius: 16px;
+    font-size: 24px;
+}
+
+#studentForm .form-panel:nth-of-type(2) .form-section-icon {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+#studentForm .form-panel:nth-of-type(3) .form-section-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+#studentForm .form-panel-header h4 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    font-weight: 750;
+    color: #172554;
+}
+
+#studentForm .form-panel-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Campos */
+
+#studentForm .form-label {
+    font-size: 13px;
+    font-weight: 650;
+    color: #334155;
+    margin-bottom: 9px;
+}
+
+#studentForm .required {
+    color: #ef4444;
+}
+
+#studentForm .form-control,
+#studentForm .form-select {
+    min-height: 48px;
+    padding: 11px 15px;
+    border: 1px solid #dfe5ef;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+#studentForm .form-control:focus,
+#studentForm .form-select:focus {
+    background-color: white;
+    border-color: #6558f5;
+    box-shadow: 0 0 0 4px rgba(101, 88, 245, 0.1);
+}
+
+#studentForm .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Botones */
+
+#studentForm .student-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+}
+
+#studentForm .student-form-actions .btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 650;
+}
+
+#studentForm .student-form-actions .btn-primary {
+    border: none;
+    background: linear-gradient(110deg, #6558f5, #3294ff);
+    box-shadow: 0 8px 20px rgba(101, 88, 245, 0.2);
+}
+
+#studentForm .student-form-actions .btn-primary:hover {
+    filter: brightness(1.07);
+}
+
+/* Menú plegable: misma solución de Estudiantes */
+
+@media (min-width: 769px) {
+    body.dashboard-body.gt10-menu-hidden #gt10Sidebar {
+        transform: translateX(-110%) !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body.dashboard-body.gt10-menu-hidden .dashboard-main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.dashboard-body:not(.gt10-menu-hidden) #gt10Sidebar {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 768px) {
+    #studentForm .form-panel {
+        padding: 20px;
+    }
+
+    .student-page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #studentForm .student-form-actions {
+        flex-direction: column;
+    }
+
+    #studentForm .student-form-actions .btn {
+        width: 100%;
+    }
+}

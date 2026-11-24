@@ -1,0 +1,673 @@
+
+/* =============================================
+   GT10 - LOGIN REDISEÑADO
+   ============================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body.gt10-login-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6f7ff;
+}
+
+.gt10-login-layout {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    min-height: 100vh;
+}
+
+/* PANEL IZQUIERDO */
+
+.gt10-login-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 38px 55px 28px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        linear-gradient(145deg,
+            #111c4c 0%,
+            #29236d 38%,
+            #4c2db1 75%,
+            #5e3de3 100%);
+}
+
+.gt10-login-decor {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.gt10-decor-one {
+    width: 450px;
+    height: 450px;
+    right: -230px;
+    top: -180px;
+    border: 80px solid rgba(255,255,255,0.045);
+}
+
+.gt10-decor-two {
+    width: 420px;
+    height: 420px;
+    left: -260px;
+    bottom: -160px;
+    background: rgba(63, 157, 255, 0.09);
+}
+
+.gt10-login-brand {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    align-self: flex-start;
+    color: white;
+    text-decoration: none;
+}
+
+.gt10-brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #40d2ef, #7762ff);
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 10px 25px rgba(46, 121, 255, 0.25);
+}
+
+.gt10-brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.gt10-brand-name strong {
+    font-size: 19px;
+}
+
+.gt10-brand-name > span {
+    color: #bdc8ef;
+    font-size: 14px;
+}
+
+.gt10-login-presentation {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+.gt10-login-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255,255,255,0.17);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.09);
+    color: #dcd9ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.gt10-login-presentation h1 {
+    margin: 25px 0 17px;
+    color: white;
+    font-size: clamp(32px, 3.2vw, 51px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+}
+
+.gt10-login-presentation h1 span {
+    display: block;
+    color: #7ddfff;
+}
+
+.gt10-login-description {
+    max-width: 530px;
+    color: #cbd4f5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ILUSTRACIÓN */
+
+.gt10-login-illustration {
+    position: relative;
+    width: min(100%, 470px);
+    height: 260px;
+    margin: 28px auto;
+}
+
+.gt10-illustration-glow {
+    position: absolute;
+    width: 300px;
+    height: 210px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #5b8dff;
+    filter: blur(90px);
+    opacity: 0.3;
+}
+
+.gt10-illustration-main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    width: 255px;
+    height: 205px;
+    padding: 19px;
+    border: 5px solid rgba(255,255,255,0.65);
+    border-radius: 22px;
+    background: linear-gradient(150deg, #ffffff, #e8eaff);
+    box-shadow: 0 30px 60px rgba(8, 12, 49, 0.3);
+}
+
+.gt10-illustration-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.gt10-illustration-top > span {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #6653ec;
+    color: white;
+}
+
+.gt10-illustration-lines {
+    flex: 1;
+}
+
+.gt10-illustration-lines i {
+    display: block;
+    height: 8px;
+    margin: 7px 0;
+    border-radius: 10px;
+    background: #dce1fa;
+}
+
+.gt10-illustration-lines i:nth-child(2) {
+    width: 70%;
+}
+
+.gt10-illustration-lines i:nth-child(3) {
+    width: 50%;
+}
+
+.gt10-illustration-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gt10-illustration-profile > span {
+    display: grid;
+    place-items: center;
+    width: 63px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #d8d6ff;
+    color: #6452e8;
+    font-size: 32px;
+}
+
+.gt10-illustration-records {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gt10-illustration-records span {
+    flex: 1;
+    height: 16px;
+    border-radius: 6px;
+    background: #e0e5f7;
+}
+
+.gt10-illustration-records span:nth-child(1) {
+    background: #bcb3ff;
+}
+
+.gt10-illustration-records span:nth-child(2) {
+    background: #9dddec;
+}
+
+.gt10-illustration-records span:nth-child(3) {
+    background: #ffd0d9;
+}
+
+.gt10-floating-icon {
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 20px;
+    font-size: 28px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.16);
+    animation: gt10Float 5s ease-in-out infinite;
+}
+
+.gt10-float-folder {
+    left: 15px;
+    top: 30px;
+    color: #087dc4;
+    background: #d5f2ff;
+}
+
+.gt10-float-graduation {
+    right: 10px;
+    top: 10px;
+    color: #6144dd;
+    background: #e8dfff;
+    animation-delay: 1s;
+}
+
+.gt10-float-chart {
+    left: 45px;
+    bottom: 0;
+    color: #f0527d;
+    background: #ffe0e9;
+    animation-delay: 2s;
+}
+
+.gt10-float-document {
+    right: 40px;
+    bottom: 0;
+    color: #079d8e;
+    background: #d2fff1;
+    animation-delay: 1.5s;
+}
+
+@keyframes gt10Float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.gt10-login-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.gt10-login-benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.08);
+}
+
+.gt10-login-benefit > span {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    font-size: 20px;
+}
+
+.gt10-login-benefit strong,
+.gt10-login-benefit small {
+    display: block;
+}
+
+.gt10-login-benefit strong {
+    font-size: 12px;
+}
+
+.gt10-login-benefit small {
+    margin-top: 3px;
+    color: #c4c8ec;
+    font-size: 11px;
+}
+
+.gt10-login-info-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #b8b9e0;
+    font-size: 11px;
+}
+
+/* PANEL DERECHO */
+
+.gt10-login-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 45px 30px;
+    background:
+        radial-gradient(circle at 90% 10%, #e9e4ff, transparent 35%),
+        #f8f9ff;
+}
+
+.gt10-login-form-wrapper {
+    width: 100%;
+    max-width: 455px;
+}
+
+.gt10-login-card {
+    padding: 40px 36px;
+    border: 1px solid #e8eaf5;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 22px 65px rgba(39, 35, 110, 0.07);
+}
+
+.gt10-login-form-icon {
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 25px;
+    border-radius: 19px;
+    background: linear-gradient(135deg, #eeeaff, #e2efff);
+    color: #6550e9;
+    font-size: 28px;
+}
+
+.gt10-login-form-eyebrow {
+    color: #6653ed;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.gt10-login-card h2 {
+    margin: 10px 0 8px;
+    color: #17214d;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.gt10-login-form-description {
+    margin-bottom: 30px;
+    color: #858ca7;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.gt10-login-field {
+    margin-bottom: 22px;
+}
+
+.gt10-login-field .form-label {
+    margin-bottom: 10px;
+    color: #283253;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.gt10-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.gt10-input-wrapper > i {
+    position: absolute;
+    left: 17px;
+    z-index: 1;
+    color: #8d95b5;
+    font-size: 19px;
+}
+
+.gt10-input-wrapper .form-control {
+    height: 54px;
+    padding: 12px 48px;
+    border: 1.5px solid #e3e6f2;
+    border-radius: 13px;
+    background: #fafbff;
+    color: #243056;
+    font-size: 13px;
+    box-shadow: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.gt10-input-wrapper .form-control:focus {
+    border-color: #7866ed;
+    box-shadow: 0 0 0 4px rgba(109, 89, 237, 0.1);
+}
+
+.gt10-input-wrapper .form-control::placeholder {
+    color: #a1a8c0;
+}
+
+.gt10-field-help {
+    display: block;
+    margin-top: 9px;
+    color: #9199b1;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.gt10-password-toggle {
+    position: absolute;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #8e94ad;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.gt10-password-toggle:hover {
+    color: #6553eb;
+    background: #f0edff;
+}
+
+.gt10-login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+.gt10-login-options .form-check-label {
+    color: #59627d;
+    font-size: 12px;
+}
+
+.gt10-login-options .form-check-input:checked {
+    background-color: #6754e8;
+    border-color: #6754e8;
+}
+
+.gt10-forgot-password {
+    color: #6551e8;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gt10-forgot-password:hover {
+    text-decoration: underline;
+}
+
+.gt10-login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(105deg, #6148e6, #3c93f4);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(92, 80, 227, 0.22);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.gt10-login-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(92, 80, 227, 0.3);
+}
+
+.gt10-login-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 27px 0 20px;
+    color: #a2a8ba;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gt10-login-divider::before,
+.gt10-login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e7e9f3;
+}
+
+.gt10-login-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #8b93a9;
+    font-size: 11px;
+    text-align: center;
+}
+
+.gt10-login-security i {
+    color: #22b79f;
+    font-size: 17px;
+}
+
+.gt10-login-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+    color: #6653e8;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gt10-login-back:hover {
+    color: #3824b8;
+}
+
+.gt10-login-mobile-brand {
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .gt10-login-info {
+        padding: 30px;
+    }
+
+    .gt10-login-presentation h1 {
+        font-size: 36px;
+    }
+
+    .gt10-login-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 850px) {
+    .gt10-login-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gt10-login-info {
+        display: none;
+    }
+
+    .gt10-login-form-section {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .gt10-login-mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 25px;
+        color: #202a55;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gt10-login-card {
+        padding: 30px 23px;
+        border-radius: 22px;
+    }
+
+    .gt10-login-card h2 {
+        font-size: 29px;
+    }
+
+    .gt10-login-options {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gt10-floating-icon {
+        animation: none;
+    }
+
+    .gt10-login-submit {
+        transition: none;
+    }
+}

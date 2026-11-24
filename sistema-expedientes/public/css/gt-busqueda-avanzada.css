@@ -1,0 +1,618 @@
+
+/* ==========================================
+   GT10 - BÚSQUEDA AVANZADA
+   MISMA LÍNEA GRÁFICA DE MATRÍCULAS
+========================================== */
+
+/* ENCABEZADO */
+
+.gt10-search-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+
+    min-height: 210px;
+    padding: 42px 48px;
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        110deg,
+        #4935c4 0%,
+        #6850ed 48%,
+        #359df5 100%
+    );
+
+    border-radius: 30px;
+    box-shadow: 0 12px 28px rgba(79, 70, 229, .12);
+}
+
+.gt10-search-hero::before {
+    content: "";
+    position: absolute;
+    right: -45px;
+    top: -110px;
+    width: 270px;
+    height: 270px;
+    border: 45px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+}
+
+.gt10-search-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.gt10-search-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: #e7e6ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.gt10-search-hero h1 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(30px, 3vw, 45px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.gt10-search-hero p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.gt10-search-hero-icon {
+    position: relative;
+    z-index: 1;
+    color: rgba(255,255,255,.65);
+    font-size: 70px;
+}
+
+/* TARJETAS SUPERIORES */
+
+.gt10-search-summary {
+    margin-bottom: 28px;
+}
+
+.gt10-search-stat {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 125px;
+    height: 100%;
+    padding: 24px 26px;
+
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(30,41,90,.05);
+}
+
+.gt10-search-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg,#37c7e8,#7462ff);
+    color: #ffffff;
+    font-size: 26px;
+
+    box-shadow: 0 8px 18px rgba(79,70,229,.13);
+}
+
+.gt10-search-stat span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.gt10-search-stat strong {
+    display: block;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* PANELES PRINCIPALES */
+
+.gt10-search-panel {
+    padding: 28px 30px;
+    margin-bottom: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(30,41,90,.05);
+}
+
+.gt10-search-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.gt10-search-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,#37c7e8,#7462ff);
+    color: #ffffff;
+    font-size: 21px;
+}
+
+.gt10-search-panel-heading h2 {
+    margin: 0 0 5px;
+    color: #0f172a;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.gt10-search-panel-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.gt10-search-panel > .gt10-search-panel-heading {
+    padding-bottom: 23px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #edf1f7;
+}
+
+/* TÍTULOS DE GRUPOS */
+
+.gt10-search-group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 15px;
+    margin-bottom: 18px;
+
+    background: #f3f2ff;
+    color: #4338ca;
+
+    border-left: 4px solid #6554ed;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.gt10-search-group-title i {
+    font-size: 17px;
+}
+
+/* FORMULARIO */
+
+#advancedSearchForm .form-label {
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+#advancedSearchForm .form-control,
+#advancedSearchForm .form-select {
+    min-height: 49px;
+    padding: 12px 15px;
+
+    background: #f8fafc;
+    color: #334155;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    font-size: 14px;
+    box-shadow: none;
+
+    transition: all .2s ease;
+}
+
+#advancedSearchForm .form-control::placeholder {
+    color: #94a3b8;
+}
+
+#advancedSearchForm .form-control:focus,
+#advancedSearchForm .form-select:focus {
+    background: #ffffff;
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.10);
+}
+
+/* BOTONES */
+
+#advancedSearchForm .student-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding-top: 24px;
+    margin-top: 25px;
+    border-top: 1px solid #edf1f7;
+}
+
+#advancedSearchForm .student-form-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 47px;
+    padding: 12px 21px;
+
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 650;
+
+    transition: all .2s ease;
+}
+
+#advancedSearchForm .btn-primary {
+    background: #5142e8;
+    border: 0;
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(42,36,135,.16);
+}
+
+#advancedSearchForm .btn-primary:hover {
+    background: #4335d0;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+#advancedSearchForm #clearSearchButton {
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+#advancedSearchForm #clearSearchButton:hover {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+/* RESULTADOS */
+
+.gt10-search-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.search-results-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 11px 16px;
+
+    background: #eef2ff;
+    color: #4338ca;
+
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#searchResultCount {
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* AVISO */
+
+.gt10-search-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 17px;
+    margin-bottom: 23px;
+
+    background: #f8fafc;
+    color: #64748b;
+
+    border: 1px solid #e8edf5;
+    border-radius: 12px;
+
+    font-size: 13px;
+}
+
+.gt10-search-notice i {
+    color: #5142e8;
+    font-size: 18px;
+}
+
+/* ESTADO VACÍO */
+
+#searchEmptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 250px;
+    padding: 40px 24px;
+
+    background: #fbfcff;
+    border: 1px dashed #dce3f2;
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+#searchEmptyState.d-none,
+#searchEmptyState[hidden] {
+    display: none !important;
+}
+
+#searchEmptyState .record-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+    margin-bottom: 17px;
+
+    background: #eef2ff;
+    color: #5142e8;
+
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+#searchEmptyState h5 {
+    margin-bottom: 8px;
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+#searchEmptyState p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* TABLA */
+
+#searchResultsContainer {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.advanced-results-table {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+}
+
+.advanced-results-table thead th {
+    padding: 16px;
+
+    background: #f5f4ff;
+    color: #33478a;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.advanced-results-table tbody td {
+    padding: 16px;
+
+    color: #334155;
+    font-size: 14px;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.advanced-results-table tbody tr:hover td {
+    background: #f8faff;
+}
+
+.advanced-results-table tbody td:first-child strong {
+    color: #0f172a;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.advanced-results-table tbody td:nth-child(2) strong {
+    color: #0f172a;
+    font-weight: 750;
+}
+
+.advanced-results-table .text-muted {
+    color: #94a3b8 !important;
+    font-size: 12px;
+}
+
+/* ESTADOS */
+
+.advanced-results-table .badge {
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.advanced-results-table .badge.bg-success {
+    background: #168c58 !important;
+    color: #ffffff !important;
+}
+
+.advanced-results-table .badge.bg-danger,
+.advanced-results-table .badge.bg-secondary {
+    background: #64748b !important;
+    color: #ffffff !important;
+}
+
+/* ACCIONES */
+
+.advanced-results-table .student-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.advanced-results-table .student-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background: #ffffff;
+    color: #64748b;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.advanced-results-table .student-action-btn:hover {
+    background: #eef2ff;
+    color: #5142e8;
+    border-color: #c7d2fe;
+}
+
+/* MENÚ PLEGABLE: MISMA CORRECCIÓN DE MATRÍCULAS */
+
+@media (min-width: 769px) {
+
+    body.dashboard-body.gt10-menu-hidden #gt10Sidebar {
+        transform: translateX(-110%) !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body.dashboard-body.gt10-menu-hidden .dashboard-main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.dashboard-body:not(.gt10-menu-hidden) #gt10Sidebar {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .gt10-search-hero {
+        padding: 34px 30px;
+    }
+
+    .gt10-search-panel {
+        padding: 23px;
+    }
+
+    .advanced-results-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gt10-search-hero {
+        padding: 30px 24px;
+        min-height: 175px;
+        border-radius: 22px;
+    }
+
+    .gt10-search-hero h1 {
+        font-size: 30px;
+    }
+
+    .gt10-search-hero-icon {
+        display: none;
+    }
+
+    .gt10-search-panel {
+        padding: 18px;
+    }
+
+    .gt10-search-results-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #advancedSearchForm .student-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #advancedSearchForm .student-form-actions .btn {
+        width: 100%;
+    }
+
+    .gt10-search-stat {
+        min-height: 105px;
+    }
+}
+/* BOTÓN DEL MENÚ - ESTILO GT10 */
+
+.gt10-search-page .gt10-sidebar-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+
+    background: #eeebff;
+    color: #6554ed;
+
+    border: 0;
+    border-radius: 15px;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.gt10-search-page .gt10-sidebar-toggle:hover {
+    background: #e3ddff;
+    color: #5142e8;
+}

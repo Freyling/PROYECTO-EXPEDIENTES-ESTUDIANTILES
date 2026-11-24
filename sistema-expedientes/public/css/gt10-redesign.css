@@ -1,0 +1,415 @@
+
+/* GT10 - Nueva identidad visual */
+
+:root {
+  --gt-primary: #6558f5;
+  --gt-blue: #3294ff;
+  --gt-turquoise: #18c8b4;
+  --gt-coral: #ff7398;
+  --gt-dark: #161b42;
+  --gt-background: #f5f6ff;
+  --gt-radius: 24px;
+}
+
+body.dashboard-body {
+  background:
+    radial-gradient(circle at 85% 5%, #e4ddff 0%, transparent 35%),
+    radial-gradient(circle at 15% 85%, #dff4ff 0%, transparent 40%),
+    var(--gt-background);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Menú lateral */
+
+.dashboard-body .sidebar {
+  background: linear-gradient(
+    170deg,
+    #141b3f 0%,
+    #262063 55%,
+    #44239b 100%
+  );
+  box-shadow: 12px 0 40px rgba(33, 28, 98, 0.12);
+}
+
+.dashboard-body .sidebar-link {
+  border-radius: 14px;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dashboard-body .sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateX(5px);
+}
+
+.dashboard-body .sidebar-link.active {
+  background: linear-gradient(
+    110deg,
+    #7761ff,
+    #3294ff
+  );
+  box-shadow: 0 10px 24px rgba(83, 93, 244, 0.25);
+}
+
+/* Área principal */
+
+.dashboard-body .dashboard-content {
+  padding: 34px;
+}
+
+.dashboard-body .dashboard-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+}
+
+/* Bienvenida */
+
+.dashboard-body .student-page-heading {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 38px 42px;
+  background: linear-gradient(
+    115deg,
+    #4836ba 0%,
+    #7254ed 45%,
+    #319ef3 100%
+  );
+  color: white;
+  box-shadow: 0 20px 45px rgba(85, 72, 215, 0.2);
+  animation: gtEntrance 0.65s ease both;
+}
+
+.dashboard-body .student-page-heading::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 45px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  right: -85px;
+  top: -115px;
+  pointer-events: none;
+}
+
+.dashboard-body .student-page-heading h1 {
+  color: white;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 800;
+}
+
+.dashboard-body .student-page-heading p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tarjetas */
+
+.dashboard-body .record-stat-card {
+  border: none;
+  border-radius: 23px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 15px 30px rgba(40, 48, 110, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.dashboard-body .record-stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px rgba(40, 48, 110, 0.2);
+}
+
+.dashboard-body .row.g-4 > div:nth-child(1) .record-stat-card {
+  background: linear-gradient(135deg, #6558f5, #927bff);
+}
+
+.dashboard-body .row.g-4 > div:nth-child(2) .record-stat-card {
+  background: linear-gradient(135deg, #1888eb, #42baf1);
+}
+
+.dashboard-body .row.g-4 > div:nth-child(3) .record-stat-card {
+  background: linear-gradient(135deg, #0faaa3, #2fd0a8);
+}
+
+.dashboard-body .row.g-4 > div:nth-child(4) .record-stat-card {
+  background: linear-gradient(135deg, #f65b94, #ffa078);
+}
+
+.dashboard-body .record-stat-card strong {
+  color: white;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.dashboard-body .record-stat-card span {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.dashboard-body .record-stat-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 17px;
+}
+
+/* Paneles */
+
+.dashboard-body .form-panel,
+.dashboard-body .gt10-widget {
+  border-radius: var(--gt-radius);
+  border: 1px solid rgba(106, 105, 180, 0.07);
+  box-shadow: 0 14px 35px rgba(38, 48, 115, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard-body .form-panel:hover,
+.dashboard-body .gt10-widget:hover {
+  box-shadow: 0 18px 45px rgba(38, 48, 115, 0.11);
+}
+
+/* Animaciones */
+
+@keyframes gtEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-body *,
+  .dashboard-body *::before,
+  .dashboard-body *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-body .dashboard-content {
+    padding: 18px;
+  }
+
+  .dashboard-body .student-page-heading {
+    padding: 28px 24px;
+  }
+}
+
+/* ====================================
+   MENÚ LATERAL PLEGABLE - GT10
+==================================== */
+
+.gt10-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 14px;
+    border: 0;
+    border-radius: 13px;
+    background: #edeaff;
+    color: #6558f5;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.gt10-sidebar-toggle:hover {
+    background: #6558f5;
+    color: white;
+    transform: scale(1.06);
+}
+
+/* Animación del menú */
+
+.dashboard-body .sidebar {
+    transition: transform 0.35s ease;
+}
+
+/* El menú se desplaza fuera de la pantalla */
+
+@media (min-width: 769px) {
+    .dashboard-body.gt10-menu-hidden .sidebar {
+        transform: translateX(-110%);
+    }
+
+    .dashboard-body.gt10-menu-hidden .dashboard-main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transition: margin-left 0.35s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .gt10-sidebar-toggle {
+        display: none;
+    }
+}
+
+/* ==========================================
+   GT10 - CORRECCIÓN DEL CARRUSEL EDUCATIVO
+   ========================================== */
+
+.dashboard-content .gt10-carousel {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 280px;
+    max-height: 280px;
+    margin: 0 0 28px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #e9eaff;
+    box-shadow: 0 12px 30px rgba(54, 48, 130, 0.15);
+}
+
+/* Contenedor de las imágenes */
+.gt10-carousel .gt10-carousel-track {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cada imagen del carrusel */
+.gt10-carousel .gt10-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+}
+
+.gt10-carousel .gt10-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Imagen ajustada al espacio */
+.gt10-carousel .gt10-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Flechas */
+.gt10-carousel .gt10-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #5142d4;
+
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gt10-carousel .gt10-carousel-arrow:hover {
+    background: #ffffff;
+}
+
+.gt10-carousel .gt10-carousel-arrow.prev {
+    left: 15px;
+}
+
+.gt10-carousel .gt10-carousel-arrow.next {
+    right: 15px;
+}
+
+/* Indicadores inferiores */
+.gt10-carousel .gt10-carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.gt10-carousel .gt10-carousel-dots button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+}
+
+.gt10-carousel .gt10-carousel-dots button.active {
+    width: 26px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    .dashboard-content .gt10-carousel {
+        height: 180px;
+        max-height: 180px;
+        border-radius: 14px;
+    }
+
+    .gt10-carousel .gt10-carousel-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+}
+/* ==========================================
+   GT10 - BOTÓN ASIGNACIONES DOCENTES
+========================================== */
+
+.gt10-btn-asignaciones {
+    background: #ffffff !important;
+    color: #243b80 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+    transition: all 0.2s ease;
+}
+
+.gt10-btn-asignaciones:hover {
+    background: #eef2ff !important;
+    color: #172554 !important;
+    border-color: #eef2ff !important;
+    transform: translateY(-2px);
+}
+
+.gt10-btn-asignaciones i {
+    color: inherit !important;
+}

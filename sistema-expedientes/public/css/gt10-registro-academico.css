@@ -1,0 +1,145 @@
+/* GT10 - REGISTRO ACADÉMICO */
+
+#academicRecordForm .form-panel {
+    background: #ffffff;
+    border: 1px solid #e6e9f5;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(35, 45, 100, 0.06);
+}
+
+#academicRecordForm .form-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid #edf0f8;
+}
+
+#academicRecordForm .form-section-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ede9ff, #e2f1ff);
+    color: #6254e8;
+    font-size: 24px;
+}
+
+#academicRecordForm .form-panel-header h4 {
+    color: #172554;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+#academicRecordForm .form-panel-header p {
+    color: #71809c;
+    margin-bottom: 0;
+}
+
+#academicRecordForm .form-label {
+    color: #24345c;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+#academicRecordForm .form-control,
+#academicRecordForm .form-select {
+    min-height: 50px;
+    border: 1px solid #dce3f2;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+#academicRecordForm textarea.form-control {
+    min-height: 125px;
+    resize: vertical;
+}
+
+#academicRecordForm .form-control:focus,
+#academicRecordForm .form-select:focus {
+    border-color: #7367f0;
+    box-shadow: 0 0 0 4px rgba(115, 103, 240, 0.12);
+}
+
+#academicRecordForm .student-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+#academicRecordForm .student-form-actions .btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+#academicRecordForm .btn-primary {
+    background: linear-gradient(110deg, #6355ed, #3694fa);
+    border: none;
+}
+
+@media (max-width: 768px) {
+    #academicRecordForm .form-panel {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    #academicRecordForm .student-form-actions .btn {
+        width: 100%;
+    }
+}
+/* ENCABEZADO MODERNO */
+
+.dashboard-content > .student-page-heading {
+    background: linear-gradient(
+        115deg,
+        #172554 0%,
+        #4338ca 55%,
+        #3182f6 100%
+    );
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 12px 28px rgba(32, 49, 116, 0.15);
+}
+
+.dashboard-content > .student-page-heading h1 {
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.dashboard-content > .student-page-heading p,
+.dashboard-content > .student-page-heading p strong,
+.dashboard-content > .student-page-heading .page-eyebrow {
+    color: #e6eaff;
+}
+
+.dashboard-content > .student-page-heading .btn {
+    background: #ffffff;
+    color: #27366f;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 11px 18px;
+    font-weight: 600;
+}
+
+.dashboard-content > .student-page-heading .btn:hover {
+    background: #edf2ff;
+    color: #172554;
+}
+
+@media (max-width: 768px) {
+    .dashboard-content > .student-page-heading {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+}

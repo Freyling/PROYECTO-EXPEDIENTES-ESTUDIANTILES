@@ -1,0 +1,38 @@
+/* GT10 · Rediseño visual fase 1. No modifica datos ni permisos. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+body.dashboard-body{font-family:'DM Sans',Arial,sans-serif;background:#f3f4ff;color:#192449}
+.dashboard-body .sidebar{background:linear-gradient(175deg,#111b45 0%,#282060 60%,#4522a2 100%)!important;box-shadow:12px 0 40px rgba(36,30,91,.12)}
+.dashboard-body .sidebar-brand{border-bottom:1px solid rgba(255,255,255,.12)}
+.dashboard-body .sidebar-logo{background:linear-gradient(135deg,#42d9ed,#7a69ff)!important;color:white!important;box-shadow:0 8px 24px rgba(68,214,235,.3)}
+.dashboard-body .sidebar-link{border-radius:14px;transition:background .25s,transform .25s,box-shadow .25s}
+.dashboard-body .sidebar-link:hover{transform:translateX(4px);background:rgba(255,255,255,.13)!important}
+.dashboard-body .sidebar-link.active{background:linear-gradient(110deg,#6557f5,#3a9bff)!important;box-shadow:0 9px 20px rgba(51,100,245,.28)}
+.dashboard-body .dashboard-main{background:transparent}
+.dashboard-body .dashboard-header{background:rgba(255,255,255,.85);backdrop-filter:blur(16px);border-bottom:1px solid #e8e7fa}
+.dashboard-body .header-title,.dashboard-body h1,.dashboard-body h4{font-family:Outfit,'DM Sans',sans-serif;letter-spacing:-.5px}
+.dashboard-body .dashboard-content{background:radial-gradient(circle at 90% 2%,rgba(134,99,255,.13),transparent 35%),radial-gradient(circle at 5% 38%,rgba(51,191,245,.09),transparent 30%)}
+.dashboard-body .student-page-heading{background:linear-gradient(115deg,#4633b8,#6d56e9 52%,#2b9fe9);border-radius:25px;padding:30px 34px;color:white;position:relative;overflow:hidden;box-shadow:0 16px 35px rgba(77,68,180,.2);margin-bottom:25px}
+.dashboard-body .student-page-heading:after{content:'';position:absolute;right:-50px;top:-100px;width:290px;height:290px;border:50px solid rgba(255,255,255,.09);border-radius:50%;pointer-events:none}
+.dashboard-body .student-page-heading h1,.dashboard-body .student-page-heading p,.dashboard-body .student-page-heading .page-eyebrow{color:white!important;position:relative;z-index:1}
+.dashboard-body .student-page-heading .page-eyebrow{letter-spacing:2px;opacity:.8}
+.dashboard-body .record-stat-card{border:0!important;border-radius:22px!important;color:white!important;position:relative;overflow:hidden;box-shadow:0 13px 28px rgba(46,58,137,.13);transition:transform .3s,box-shadow .3s;animation:gt10-rise .55s ease both}
+.dashboard-body .row.g-4>div:nth-child(1) .record-stat-card{background:linear-gradient(135deg,#6854ec,#9581ff)!important}
+.dashboard-body .row.g-4>div:nth-child(2) .record-stat-card{background:linear-gradient(135deg,#157fe3,#43baf6)!important;animation-delay:.08s}
+.dashboard-body .row.g-4>div:nth-child(3) .record-stat-card{background:linear-gradient(135deg,#0b9d99,#32d3b2)!important;animation-delay:.16s}
+.dashboard-body .row.g-4>div:nth-child(4) .record-stat-card{background:linear-gradient(135deg,#ef6596,#ffab7a)!important;animation-delay:.24s}
+.dashboard-body .record-stat-card:hover{transform:translateY(-7px);box-shadow:0 20px 35px rgba(46,58,137,.22)}
+.dashboard-body .record-stat-card span,.dashboard-body .record-stat-card strong,.dashboard-body .record-stat-card i{color:white!important}
+.dashboard-body .record-stat-icon{background:rgba(255,255,255,.22)!important;border-radius:16px!important}
+.dashboard-body .form-panel{background:white;border:1px solid #e9e9f7;border-radius:23px!important;box-shadow:0 12px 35px rgba(42,45,110,.06);animation:gt10-rise .6s ease both}
+.dashboard-body .form-section-icon{background:linear-gradient(135deg,#ece8ff,#ddf4ff)!important;color:#6356d9!important;border-radius:15px!important}
+.dashboard-body .btn-primary{background:linear-gradient(110deg,#6557ef,#338af0);border:0;box-shadow:0 6px 15px rgba(76,95,231,.22)}
+.dashboard-body .btn{border-radius:12px;transition:transform .2s,box-shadow .2s}
+.dashboard-body .btn:hover{transform:translateY(-2px)}
+.dashboard-body .table{--bs-table-bg:transparent}
+.dashboard-body .table thead th{background:#f5f4ff;color:#4a5083;border-bottom:0;padding:14px}
+.dashboard-body .table tbody tr{transition:background .2s}
+.dashboard-body .table tbody tr:hover{background:#f7f8ff}
+.dashboard-body .alert{border-radius:14px;border:0}
+@keyframes gt10-rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:767px){.dashboard-body .student-page-heading{padding:24px 20px;border-radius:18px}.dashboard-body .form-panel{border-radius:17px!important}}
+@media(prefers-reduced-motion:reduce){.dashboard-body *, .dashboard-body *:before,.dashboard-body *:after{animation:none!important;transition:none!important}}

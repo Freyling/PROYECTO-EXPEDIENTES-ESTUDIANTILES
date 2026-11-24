@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar estudiante | Sistema de Expedientes</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+   <link rel="stylesheet" href="../public/css/styles.css">
+<link rel="stylesheet" href="../public/css/gt10-visual.css">
+<link rel="stylesheet" href="../public/css/gt10-dashboard-premium.css">
+<link rel="stylesheet" href="../public/css/gt10-redesign.css">
+<link rel="stylesheet" href="../public/css/gt10-editar-estudiante.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar" id="gt10Sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+                <h5>Sistema de</h5>
+                <span>Expedientes</span>
+            </div>
+
+        </div>
+
+        <div class="sidebar-label">
+            MENÚ PRINCIPAL
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Inicio</span>
+            </a>
+
+            <a href="estudiantes.html" class="sidebar-link active">
+                <i class="bi bi-people-fill"></i>
+                <span>Estudiantes</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-folder-fill"></i>
+                <span>Expedientes</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Documentos</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-search"></i>
+                <span>Búsqueda avanzada</span>
+            </a>
+
+            <a href="reportes.html" class="sidebar-link">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Reportes</span>
+            </a>
+
+            <div class="sidebar-label sidebar-section">
+                ADMINISTRACIÓN
+            </div>
+
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-person-gear"></i>
+                <span>Usuarios</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-clock-history"></i>
+                <span>Historial</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="sidebar-user-info">
+                    <strong>Administrador</strong>
+                    <span>Administrador</span>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="logout-button">
+                <i class="bi bi-box-arrow-left"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <button
+    type="button"
+    id="toggleSidebar"
+    class="gt10-sidebar-toggle"
+    aria-controls="gt10Sidebar"
+    aria-expanded="true"
+    title="Contraer o expandir menú"
+>
+    <i class="bi bi-layout-sidebar-inset"></i>
+</button>
+                <span class="header-title">
+                    Editar estudiante
+                </span>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button class="header-icon-button">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="header-avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+            <div class="student-breadcrumb">
+
+                <a href="dashboard.html">
+                    Inicio
+                </a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <a href="estudiantes.html">
+                    Estudiantes
+                </a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <strong>
+                    Editar
+                </strong>
+
+            </div>
+
+
+            <div class="student-page-heading">
+
+                <div>
+
+                    <p class="page-eyebrow">
+                        GESTIÓN DE ESTUDIANTES
+                    </p>
+
+                    <h1>
+                        Editar estudiante
+                    </h1>
+
+                    <p>
+                        Modifica la información registrada del estudiante.
+                    </p>
+
+                </div>
+
+                <a
+                    href="estudiantes.html"
+                    class="btn btn-outline-secondary"
+                >
+                    <i class="bi bi-arrow-left me-1"></i>
+                    Volver
+                </a>
+
+            </div>
+
+
+            <div
+                id="editStudentNotFound"
+                class="alert alert-danger d-none"
+            >
+                No se encontró el estudiante solicitado.
+            </div>
+
+
+            <form id="editStudentForm">
+
+                <div class="form-panel">
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+                            <h4>Información personal</h4>
+                            <p>
+                                Actualiza los datos generales del estudiante.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editPrimerNombre"
+                                class="form-label"
+                            >
+                                Primer nombre
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editPrimerNombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editSegundoNombre"
+                                class="form-label"
+                            >
+                                Segundo nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editSegundoNombre"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editPrimerApellido"
+                                class="form-label"
+                            >
+                                Primer apellido
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editPrimerApellido"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editSegundoApellido"
+                                class="form-label"
+                            >
+                                Segundo apellido
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editSegundoApellido"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editIdentificacion"
+                                class="form-label"
+                            >
+                                Número de identificación
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editIdentificacion"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editFechaNacimiento"
+                                class="form-label"
+                            >
+                                Fecha de nacimiento
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="editFechaNacimiento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editSexo"
+                                class="form-label"
+                            >
+                                Sexo
+                                <span class="required">*</span>
+                            </label>
+
+                            <select
+                                id="editSexo"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="Masculino">
+                                    Masculino
+                                </option>
+
+                                <option value="Femenino">
+                                    Femenino
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editDireccion"
+                                class="form-label"
+                            >
+                                Dirección
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="editDireccion"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-panel mt-4">
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+                            <h4>Información de contacto</h4>
+                            <p>
+                                Actualiza los datos de contacto.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editTelefono"
+                                class="form-label"
+                            >
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="editTelefono"
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editCorreo"
+                                class="form-label"
+                            >
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="editCorreo"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-panel mt-4">
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+
+                        <div>
+                            <h4>Información académica inicial</h4>
+                            <p>
+                                Actualiza los datos académicos básicos.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+                        
+<div class="col-md-6">
+
+    <label
+        for="editCodigoEstudiante"
+        class="form-label"
+    >
+        Código del estudiante
+    </label>
+
+    <input
+        type="text"
+        class="form-control"
+        id="editCodigoEstudiante"
+        readonly
+        aria-describedby="editCodigoHelp"
+    >
+
+    <small
+        id="editCodigoHelp"
+        class="text-muted"
+    >
+        Código asignado automáticamente. No puede modificarse.
+    </small>
+
+</div>
+
+
+                        
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="editEstadoEstudiante"
+                                class="form-label"
+                            >
+                                Estado
+                                <span class="required">*</span>
+                            </label>
+
+                            <select
+                                id="editEstadoEstudiante"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="Activo">
+                                    Activo
+                                </option>
+
+                                <option value="Inactivo">
+                                    Inactivo
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="editStudentMessage"
+                    class="alert alert-success d-none mt-4"
+                >
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Estudiante actualizado correctamente.
+                </div>
+
+
+                <div class="student-form-actions">
+
+                    <a
+                        href="estudiantes.html"
+                        class="btn btn-light border"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        <i class="bi bi-floppy-fill me-1"></i>
+                        Guardar cambios
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="../public/js/auth.js"></script>
+<script src="../public/js/app.js"></script>
+<script src="../public/js/gt10-sidebar.js"></script>
+<script
+    type="module"
+    src="../public/js/firebase-estudiantes.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+
+/* =========================================
+   GT10 - AGREGAR DOCUMENTO DIGITAL
+   ========================================= */
+
+#documentForm {
+    width: 100%;
+}
+
+/* Panel principal */
+#documentForm .form-panel {
+    background: #ffffff;
+    border: 1px solid #e8ecf5;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 10px 35px rgba(30, 41, 85, 0.07);
+}
+
+/* Encabezado del formulario */
+#documentForm .form-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #edf0f7;
+}
+
+#documentForm .form-section-icon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff;
+    font-size: 24px;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.18);
+}
+
+#documentForm .form-panel-header h4 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #172554;
+}
+
+#documentForm .form-panel-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Etiquetas */
+#documentForm .form-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos */
+#documentForm .form-control,
+#documentForm .form-select {
+    min-height: 48px;
+    border: 1px solid #dbe2ee;
+    border-radius: 12px;
+    padding: 11px 15px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#documentForm .form-control:focus,
+#documentForm .form-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    outline: none;
+}
+
+#documentForm .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Selector de archivo */
+#documentFile {
+    padding: 14px !important;
+    border: 2px dashed #c7d2fe !important;
+    background: #f8faff !important;
+    border-radius: 14px !important;
+    cursor: pointer;
+}
+
+#documentFile:hover {
+    border-color: #6366f1 !important;
+    background: #f1f5ff !important;
+}
+
+#documentFile::file-selector-button {
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 16px;
+    margin-right: 16px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#documentForm .text-muted {
+    display: block;
+    margin-top: 9px;
+    font-size: 12px;
+    color: #64748b !important;
+}
+
+/* Descripción */
+#documentDescription {
+    min-height: 115px;
+    resize: vertical;
+}
+
+/* Mensaje de confirmación */
+#documentMessage {
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+    padding: 15px 20px;
+    background: #f0fdf4;
+    color: #166534;
+    font-weight: 500;
+}
+
+/* Botones inferiores */
+#documentForm .student-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+#documentForm .student-form-actions .btn {
+    min-height: 46px;
+    padding: 11px 22px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#documentForm .student-form-actions .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.2);
+}
+
+#documentForm .student-form-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(79, 70, 229, 0.3);
+}
+
+#documentForm .student-form-actions .btn-light {
+    background: #ffffff;
+    border: 1px solid #dbe2ee !important;
+    color: #475569;
+}
+
+#documentForm .student-form-actions .btn-light:hover {
+    background: #f1f5f9;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    #documentForm .form-panel {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    #documentForm .form-panel-header {
+        align-items: flex-start;
+    }
+
+    #documentForm .form-panel-header h4 {
+        font-size: 18px;
+    }
+
+    #documentForm .student-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    #documentForm .student-form-actions .btn {
+        width: 100%;
+    }
+}

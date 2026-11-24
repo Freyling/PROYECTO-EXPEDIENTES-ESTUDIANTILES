@@ -1,0 +1,140 @@
+
+/* GT10 - REGISTRO DE CALIFICACIONES */
+
+.dashboard-content {
+    padding-bottom: 45px;
+}
+
+.student-page-heading {
+    padding: 34px;
+    border-radius: 26px;
+    background: linear-gradient(115deg, #5140c7, #7051ef, #3294ff);
+    color: white;
+    margin-bottom: 28px;
+}
+
+.student-page-heading h1 {
+    color: white;
+    font-weight: 800;
+    font-size: clamp(28px, 3vw, 40px);
+}
+
+.student-page-heading p,
+.student-page-heading .page-eyebrow {
+    color: rgba(255,255,255,.9);
+}
+
+.dashboard-content > .dashboard-panel {
+    padding: 30px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid #e9ecf5;
+    box-shadow: 0 12px 32px rgba(40,45,100,.06);
+}
+
+.dashboard-panel h5 {
+    color: #172554;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.dashboard-panel h5 i {
+    color: #6558f5;
+}
+
+#gradeForm .form-label {
+    color: #465779;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+#gradeForm .form-control,
+#gradeForm .form-select,
+#gradeSearch {
+    min-height: 48px;
+    border: 1px solid #e1e6f2;
+    border-radius: 12px;
+    background-color: #f8faff;
+    color: #172554;
+    padding: 11px 14px;
+}
+
+#gradeForm textarea.form-control {
+    min-height: 105px;
+}
+
+#gradeForm .form-control:focus,
+#gradeForm .form-select:focus,
+#gradeSearch:focus {
+    background-color: white;
+    border-color: #6558f5;
+    box-shadow: 0 0 0 4px rgba(101,88,245,.1);
+}
+
+#gradeForm .form-control[readonly] {
+    background: #eef1fa;
+    color: #52627d;
+}
+
+#gradeForm button[type="submit"] {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(115deg, #6558f5, #3294ff);
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(101,88,245,.16);
+}
+
+.dashboard-content .student-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.dashboard-content .table-responsive {
+    border: 1px solid #e7ebf5;
+    border-radius: 16px;
+    overflow-x: auto;
+}
+
+.dashboard-content .student-table thead th {
+    background: #f0f2ff;
+    color: #53638a;
+    padding: 17px 15px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.dashboard-content .student-table tbody td {
+    padding: 17px 15px;
+    color: #26365c;
+    vertical-align: middle;
+}
+
+.dashboard-content .student-table .badge {
+    padding: 8px 12px;
+    border-radius: 999px;
+}
+
+.dashboard-content .student-table .bg-success {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+.dashboard-content .student-table .bg-danger {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+@media (max-width: 768px) {
+    .student-page-heading,
+    .dashboard-content > .dashboard-panel {
+        padding: 20px;
+    }
+
+    #gradeForm button[type="submit"] {
+        width: 100%;
+    }
+}

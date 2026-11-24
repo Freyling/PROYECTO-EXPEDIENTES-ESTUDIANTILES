@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Calificaciones | Sistema de Expedientes
+    </title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../public/css/styles.css"
+    >
+    <link rel="stylesheet" href="../public/css/gt10-visual.css">
+<link rel="stylesheet" href="../public/css/gt10-dashboard-premium.css">
+<link rel="stylesheet" href="../public/css/gt10-redesign.css">
+<link rel="stylesheet" href="../public/css/gt10-calificaciones.css">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+   <aside class="sidebar" id="gt10Sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+                <h5>Sistema de</h5>
+                <span>Expedientes</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-label">
+            MENÚ PRINCIPAL
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="dashboard.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Inicio</span>
+            </a>
+
+
+            <a
+                href="estudiantes.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-people-fill"></i>
+                <span>Estudiantes</span>
+            </a>
+
+
+            <a
+                href="matriculas.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-journal-check"></i>
+                <span>Matrículas</span>
+            </a>
+
+
+            <a
+                href="asignaturas.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-book-fill"></i>
+                <span>Asignaturas</span>
+            </a>
+
+
+            <a
+                href="calificaciones.html"
+                class="sidebar-link active"
+            >
+                <i class="bi bi-clipboard-data-fill"></i>
+                <span>Calificaciones</span>
+            </a>
+
+
+            <a
+                href="expedientes.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-folder-fill"></i>
+                <span>Expedientes</span>
+            </a>
+
+
+            <a
+                href="documentos.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Documentos</span>
+            </a>
+
+
+            <a
+                href="busqueda-avanzada.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-search"></i>
+                <span>Búsqueda avanzada</span>
+            </a>
+
+
+            <a
+                href="reportes.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Reportes</span>
+            </a>
+
+
+            <div class="sidebar-label sidebar-section">
+                ADMINISTRACIÓN
+            </div>
+
+
+            <a
+                href="#"
+                class="sidebar-link"
+            >
+                <i class="bi bi-person-gear"></i>
+                <span>Usuarios</span>
+            </a>
+
+
+            <a
+                href="historial.html"
+                class="sidebar-link"
+            >
+                <i class="bi bi-clock-history"></i>
+                <span>Historial</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="sidebar-user-info">
+
+                    <strong>
+                        Administrador
+                    </strong>
+
+                    <span>
+                        Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="login.html"
+                class="logout-button"
+            >
+                <i class="bi bi-box-arrow-left"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+           <button
+    type="button"
+    id="toggleSidebar"
+    class="gt10-sidebar-toggle"
+    aria-controls="gt10Sidebar"
+    aria-expanded="true"
+    aria-label="Ocultar menú lateral"
+    title="Mostrar u ocultar menú"
+>
+    <i class="bi bi-layout-sidebar-inset"></i>
+</button>
+
+
+            <div class="header-actions">
+
+                <button class="header-icon-button">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="header-avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="student-breadcrumb">
+
+                <a href="dashboard.html">
+                    Inicio
+                </a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <strong>
+                    Calificaciones
+                </strong>
+
+            </div>
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="student-page-heading">
+
+                <div>
+
+                    <p class="page-eyebrow">
+                        GESTIÓN ACADÉMICA
+                    </p>
+
+                    <h1>
+                        Registro de calificaciones
+                    </h1>
+
+                    <p>
+                        Registra las calificaciones de los estudiantes
+                        según su matrícula, semestre y asignatura.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div
+                id="gradeMessage"
+                class="alert alert-success d-none"
+            >
+
+                <i class="bi bi-check-circle-fill me-2"></i>
+
+                Calificación registrada correctamente.
+
+            </div>
+
+
+            <!-- SIN MATRÍCULAS -->
+
+            <div
+                id="noEnrollmentsMessage"
+                class="alert alert-warning d-none"
+            >
+
+                <i class="bi bi-exclamation-triangle me-2"></i>
+
+                No existen matrículas activas. Debes registrar una
+                matrícula antes de ingresar calificaciones.
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <div class="dashboard-panel mb-4">
+
+                <div class="mb-4">
+
+                    <h5 class="mb-1">
+
+                        <i class="bi bi-pencil-square me-2"></i>
+
+                        Nueva calificación
+
+                    </h5>
+
+                    <p class="text-muted mb-0">
+                        Selecciona al estudiante matriculado y completa
+                        la información académica.
+                    </p>
+
+                </div>
+
+
+                <form id="gradeForm">
+
+                    <div class="row g-3">
+
+
+                        <!-- MATRÍCULA -->
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="gradeEnrollment"
+                                class="form-label"
+                            >
+                                Estudiante matriculado *
+                            </label>
+
+                            <select
+                                id="gradeEnrollment"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona un estudiante
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- AÑO -->
+
+                        <div class="col-md-3">
+
+                            <label
+                                for="gradeYear"
+                                class="form-label"
+                            >
+                                Año lectivo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="gradeYear"
+                                class="form-control"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <!-- NIVEL -->
+
+                        <div class="col-md-3">
+
+                            <label
+                                for="gradeLevel"
+                                class="form-label"
+                            >
+                                Nivel / Grado
+                            </label>
+
+                            <input
+                                type="text"
+                                id="gradeLevel"
+                                class="form-control"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <!-- SEMESTRE -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeSemester"
+                                class="form-label"
+                            >
+                                Semestre *
+                            </label>
+
+                            <select
+                                id="gradeSemester"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="I Semestre">
+                                    I Semestre
+                                </option>
+
+                                <option value="II Semestre">
+                                    II Semestre
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ASIGNATURA -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeSubject"
+                                class="form-label"
+                            >
+                                Asignatura *
+                            </label>
+
+                            <select
+                                id="gradeSubject"
+                                class="form-select"
+                                required
+                                disabled
+                            >
+
+                                <option value="">
+                                    Selecciona primero al estudiante
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- EVALUACIÓN -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeEvaluation"
+                                class="form-label"
+                            >
+                                Evaluación *
+                            </label>
+
+                            <select
+                                id="gradeEvaluation"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona
+                                </option>
+
+                                <option value="I Parcial">
+                                    I Parcial
+                                </option>
+
+                                <option value="II Parcial">
+                                    II Parcial
+                                </option>
+
+                                <option value="Nota semestral">
+                                    Nota semestral
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- NOTA -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeValue"
+                                class="form-label"
+                            >
+                                Calificación *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="gradeValue"
+                                class="form-control"
+                                min="0"
+                                max="100"
+                                step="1"
+                                placeholder="0 - 100"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ESTADO -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeStatus"
+                                class="form-label"
+                            >
+                                Estado
+                            </label>
+
+                            <input
+                                type="text"
+                                id="gradeStatus"
+                                class="form-control"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <!-- FECHA -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="gradeDate"
+                                class="form-label"
+                            >
+                                Fecha *
+                            </label>
+
+                            <input
+                                type="date"
+                                id="gradeDate"
+                                class="form-control"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- OBSERVACIONES -->
+
+                        <div class="col-12">
+
+                            <label
+                                for="gradeObservations"
+                                class="form-label"
+                            >
+                                Observaciones
+                            </label>
+
+                            <textarea
+                                id="gradeObservations"
+                                class="form-control"
+                                rows="3"
+                                placeholder="Observaciones sobre la evaluación..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <hr class="my-4">
+
+
+                    <div class="d-flex justify-content-end">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+
+                            <i class="bi bi-save me-1"></i>
+
+                            Guardar calificación
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- HISTORIAL DE CALIFICACIONES -->
+
+            <div class="dashboard-panel">
+
+                <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4"
+                >
+
+                    <div>
+
+                        <h5 class="mb-1">
+
+                            <i class="bi bi-table me-2"></i>
+
+                            Calificaciones registradas
+
+                        </h5>
+
+                        <p class="text-muted mb-0">
+                            Consulta las evaluaciones almacenadas.
+                        </p>
+
+                    </div>
+
+
+                    <div style="min-width: 300px;">
+
+                        <input
+                            type="text"
+                            id="gradeSearch"
+                            class="form-control"
+                            placeholder="Buscar estudiante o asignatura..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table class="table student-table align-middle">
+
+                        <thead>
+
+                            <tr>
+                                <th>Estudiante</th>
+                                <th>Año</th>
+                                <th>Nivel</th>
+                                <th>Semestre</th>
+                                <th>Asignatura</th>
+                                <th>Evaluación</th>
+                                <th>Nota</th>
+                                <th>Estado</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="gradeTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div
+                    id="gradeEmptyState"
+                    class="empty-state"
+                >
+
+                    <div class="empty-state-icon">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+
+                    <h5>
+                        No hay calificaciones registradas
+                    </h5>
+
+                    <p>
+                        Las calificaciones registradas aparecerán aquí.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+<script src="../public/js/auth.js"></script>
+<script src="../public/js/layout.js"></script>
+<script src="../public/js/app.js"></script>
+<script src="../public/js/calificaciones.js"></script>
+<script src="../public/js/gt10-sidebar.js"></script>
+
+</body>
+</html>

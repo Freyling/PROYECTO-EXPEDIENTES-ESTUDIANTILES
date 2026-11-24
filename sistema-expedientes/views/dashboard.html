@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Sistema de Expedientes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/gt10-visual.css">
+    <link rel="stylesheet" href="../public/css/gt10-dashboard-premium.css">
+    <link rel="stylesheet" href="../public/css/gt10-redesign.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar" id="gt10Sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div>
+                <h5>Sistema de</h5>
+                <span>Expedientes</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MENÚ PRINCIPAL</div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-link active">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Inicio</span>
+            </a>
+
+            <a href="estudiantes.html" class="sidebar-link">
+                <i class="bi bi-people-fill"></i>
+                <span>Estudiantes</span>
+            </a>
+
+            <a href="estudiantes.html" class="sidebar-link">
+                <i class="bi bi-folder-fill"></i>
+                <span>Expedientes</span>
+            </a>
+
+            <a href="busqueda-avanzada.html" class="sidebar-link">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Documentos</span>
+            </a>
+
+            <a href="busqueda-avanzada.html" class="sidebar-link">
+                <i class="bi bi-search"></i>
+                <span>Búsqueda avanzada</span>
+            </a>
+
+            <a href="reportes.html" class="sidebar-link" data-admin-only>
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Reportes</span>
+            </a>
+
+            <div class="sidebar-label sidebar-section"
+                 id="administrationMenuSection">
+                ADMINISTRACIÓN
+            </div>
+
+            <a href="usuarios.html"
+               class="sidebar-link"
+               data-permission="usuarios.gestionar">
+                <i class="bi bi-person-gear"></i>
+                <span>Usuarios</span>
+            </a>
+
+            <a href="historial.html"
+               class="sidebar-link"
+               data-permission="auditoria.ver">
+                <i class="bi bi-clock-history"></i>
+                <span>Historial</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="user-avatar" id="currentUserAvatar">U</div>
+                <div class="sidebar-user-info">
+                    <strong id="currentUserName">Usuario</strong>
+                    <span id="currentUserRole">Rol</span>
+                </div>
+            </div>
+
+            <a href="#"
+               class="logout-button"
+               id="logoutButton"
+               title="Cerrar sesión">
+                <i class="bi bi-box-arrow-left"></i>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="dashboard-main">
+
+        <!-- BARRA SUPERIOR -->
+        <header class="dashboard-header">
+
+            <div class="d-flex align-items-center">
+
+                <button class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Abrir menú">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <button type="button"
+                        id="toggleSidebar"
+                        class="gt10-sidebar-toggle"
+                        aria-controls="gt10Sidebar"
+                        aria-expanded="true"
+                        aria-label="Ocultar menú lateral"
+                        title="Mostrar u ocultar menú">
+                    <i class="bi bi-layout-sidebar-inset"></i>
+                </button>
+
+                <span class="header-title">Dashboard</span>
+            </div>
+
+            <div class="header-actions">
+                <button type="button"
+                        class="header-icon-button"
+                        title="Notificaciones">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="header-avatar"
+                     id="currentUserHeaderAvatar">U</div>
+            </div>
+
+        </header>
+
+        <div class="dashboard-content">
+
+            <!-- CARRUSEL EDUCATIVO -->
+            <section class="gt10-carousel"
+                     aria-label="Galería educativa">
+
+                <div class="gt10-carousel-track"
+                     id="gt10CarouselTrack">
+
+                    <div class="gt10-slide active">
+                        <img
+                            src="../public/img/carrusel/educacion1.png"
+                            alt="Gestión de expedientes académicos"
+                        >
+                    </div>
+
+                    <div class="gt10-slide">
+                        <img
+                            src="../public/img/carrusel/educacion2.png"
+                            alt="Educación y tecnología digital"
+                        >
+                    </div>
+
+                    <div class="gt10-slide">
+                        <img
+                            src="../public/img/carrusel/educacion3.png"
+                            alt="Innovación y recursos educativos"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="button"
+                        class="gt10-carousel-arrow prev"
+                        id="gt10Prev"
+                        aria-label="Imagen anterior">
+                    &#10094;
+                </button>
+
+                <button type="button"
+                        class="gt10-carousel-arrow next"
+                        id="gt10Next"
+                        aria-label="Imagen siguiente">
+                    &#10095;
+                </button>
+
+                <div class="gt10-carousel-dots"
+                     id="gt10CarouselDots">
+                    <button type="button"
+                            class="active"
+                            aria-label="Imagen 1"></button>
+                    <button type="button"
+                            aria-label="Imagen 2"></button>
+                    <button type="button"
+                            aria-label="Imagen 3"></button>
+                </div>
+
+            </section>
+
+            <!-- BIENVENIDA -->
+            <div class="student-page-heading">
+                <div>
+                    <p class="page-eyebrow">PANEL PRINCIPAL</p>
+
+                    <h1 id="currentUserWelcome">
+                        Bienvenido
+                    </h1>
+
+                    <p>
+                        Consulta el estado general de los estudiantes,
+                        expedientes y documentos registrados.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ESTADÍSTICAS -->
+            <div class="row g-4">
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="record-stat-card h-100">
+                        <div class="record-stat-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <div>
+                            <span>Estudiantes</span>
+                            <strong id="dashboardStudentCount">0</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="record-stat-card h-100">
+                        <div class="record-stat-icon">
+                            <i class="bi bi-folder2-open"></i>
+                        </div>
+                        <div>
+                            <span>Expedientes</span>
+                            <strong id="dashboardRecordCount">0</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="record-stat-card h-100">
+                        <div class="record-stat-icon">
+                            <i class="bi bi-journal-check"></i>
+                        </div>
+                        <div>
+                            <span>Registros académicos</span>
+                            <strong id="dashboardAcademicCount">0</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-3">
+                    <div class="record-stat-card h-100">
+                        <div class="record-stat-icon">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                        </div>
+                        <div>
+                            <span>Documentos</span>
+                            <strong id="dashboardDocumentCount">0</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- GRÁFICOS E INDICADORES -->
+            <section class="gt10-insights mt-4"
+                     aria-label="Resumen visual académico">
+
+                <div class="gt10-insights-top">
+                    <div>
+                        <span class="gt10-kicker">
+                            CENTRO DE INFORMACIÓN
+                        </span>
+                        <h2>Tu institución, en perspectiva</h2>
+                        <p>
+                            Indicadores construidos con los registros
+                            disponibles en este navegador.
+                        </p>
+                    </div>
+
+                    <span class="gt10-live-pill">
+                        <span></span>
+                        Datos del prototipo
+                    </span>
+                </div>
+
+                <div class="gt10-insights-grid">
+
+                    
+<!-- GRÁFICO DE RENDIMIENTO ACADÉMICO -->
+<article class="gt10-widget gt10-widget-wide">
+
+    <div class="gt10-widget-head">
+        <div>
+            <h3>Rendimiento académico</h3>
+            <p>Promedio de calificaciones por asignatura</p>
+        </div>
+
+        <div class="gt10-widget-icon violet">
+            <i class="bi bi-bar-chart-line"></i>
+        </div>
+    </div>
+
+    <div id="gt10SubjectChart"
+         class="gt10-bars"
+         role="img"
+         aria-label="Promedio de calificaciones por asignatura">
+    </div>
+
+    <p class="gt10-chart-note"
+       id="gt10SubjectNote">
+        Calculando promedios académicos...
+    </p>
+
+</article>
+
+
+<!-- MÓDULO DE ANALÍTICA ACADÉMICA -->
+<article class="gt10-widget gt10-widget-spotlight">
+    
+
+    <div class="gt10-widget-head">
+        <div>
+            <h3>Analítica Académica</h3>
+            <p>Seguimiento del rendimiento estudiantil</p>
+        </div>
+
+        <div class="gt10-widget-icon coral">
+            <i class="bi bi-graph-up-arrow"></i>
+        </div>
+    </div>
+
+    <div class="gt10-prediction-symbol">
+        <i class="bi bi-bar-chart-line"></i>
+        <span>
+            <i class="bi bi-graph-up-arrow"></i>
+        </span>
+    </div>
+
+    <h4>Información para mejores decisiones</h4>
+
+    <p>
+        Consulta los indicadores académicos,
+        analiza el rendimiento estudiantil
+        y da seguimiento a los resultados
+        para apoyar la toma de decisiones.
+    </p>
+
+    <span class="gt10-upcoming">
+        Módulo disponible
+    </span>
+
+</article>
+
+
+                    <!-- PANORAMA GENERAL -->
+                    <article class="gt10-widget gt10-widget-wide gt10-widget-activity"
+         style="grid-column: 1 / -1;">
+
+                        <div class="gt10-widget-head">
+                            <div>
+                                <h3>Panorama del sistema</h3>
+                                <p>Registros disponibles por categoría</p>
+                            </div>
+
+                            <div class="gt10-widget-icon blue">
+                                <i class="bi bi-grid"></i>
+                            </div>
+                        </div>
+
+                        <div id="gt10CategoryBars"
+                             class="gt10-category-bars">
+                        </div>
+
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ACCIONES RÁPIDAS -->
+            <div class="form-panel mt-4">
+
+                <div class="form-panel-header">
+                    <div class="form-section-icon">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+
+                    <div>
+                        <h4>Acciones rápidas</h4>
+                        <p>
+                            Accede directamente a las principales
+                            funciones del sistema.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 flex-wrap">
+
+                    <a href="registrar-estudiante.html"
+                       class="btn btn-primary"
+                       data-admin-only>
+                        <i class="bi bi-person-plus-fill me-1"></i>
+                        Registrar estudiante
+                    </a>
+
+                    <a href="estudiantes.html"
+                       class="btn btn-outline-primary">
+                        <i class="bi bi-people-fill me-1"></i>
+                        Consultar estudiantes
+                    </a>
+
+                    <a href="busqueda-avanzada.html"
+                       class="btn btn-outline-primary"
+                       data-admin-only>
+                        <i class="bi bi-search me-1"></i>
+                        Búsqueda avanzada
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- ESTUDIANTES RECIENTES -->
+            <div class="form-panel mt-4">
+
+                <div class="record-section-heading">
+
+                    <div class="form-panel-header mb-0">
+                        <div class="form-section-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                        <div>
+                            <h4>Estudiantes recientes</h4>
+                            <p>
+                                Últimos estudiantes registrados
+                                en el sistema.
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="estudiantes.html"
+                       class="btn btn-outline-primary btn-sm">
+                        Ver todos
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+
+                </div>
+
+                <div id="dashboardRecentEmpty"
+                     class="record-empty-box">
+
+                    <div class="record-empty-icon">
+                        <i class="bi bi-person-plus"></i>
+                    </div>
+
+                    <h5>No hay estudiantes registrados</h5>
+                    <p>
+                        Los estudiantes registrados aparecerán
+                        en esta sección.
+                    </p>
+                </div>
+
+                <div id="dashboardRecentContainer"
+                     class="table-responsive d-none">
+
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Estudiante</th>
+                                <th>Identificación</th>
+                                <th>Estado</th>
+                                <th>Expediente</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dashboardRecentStudents"></tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- ESTADO DEL PROTOTIPO -->
+            <div class="form-panel mt-4">
+
+                <div class="form-panel-header">
+                    <div class="form-section-icon">
+                        <i class="bi bi-activity"></i>
+                    </div>
+
+                    <div>
+                        <h4>Estado del prototipo</h4>
+                        <p>Resumen de los módulos implementados.</p>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="alert alert-success mb-0">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Gestión de estudiantes
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="alert alert-success mb-0">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Expediente digital
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="alert alert-success mb-0">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Historial académico
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="alert alert-success mb-0">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Búsqueda avanzada
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-primary mt-3 mb-0">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Almacenamiento actual:</strong>
+                    LocalStorage utilizado temporalmente durante
+                    la implementación del prototipo.
+                </div>
+
+            </div>
+
+            <!-- ESTADO DEL SISTEMA -->
+            <div class="form-panel mt-4">
+
+                <div class="form-panel-header">
+                    <div class="form-section-icon">
+                        <i class="bi bi-cloud-check-fill"></i>
+                    </div>
+
+                    <div>
+                        <h4>Estado del sistema</h4>
+                        <p>Estado actual del prototipo web.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mb-0">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Sistema disponible y funcionando correctamente.
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- LIBRERÍAS Y FUNCIONES DEL SISTEMA -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../public/js/auth.js"></script>
+<script src="../public/js/layout.js"></script>
+<script src="../public/js/app.js"></script>
+<script src="../public/js/dashboard.js"></script>
+<script src="../public/js/gt10-dashboard-visual.js"></script>
+
+<!-- MENÚ DESPLEGABLE -->
+<script src="../public/js/gt10-sidebar.js"></script>
+
+<!-- CARRUSEL EDUCATIVO -->
+
+<!-- CARRUSEL EDUCATIVO GT10 -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".gt10-carousel .gt10-slide");
+    const indicadores = document.querySelectorAll(".gt10-carousel-dots button");
+    const btnAnterior = document.getElementById("gt10Prev");
+    const btnSiguiente = document.getElementById("gt10Next");
+
+    if (slides.length === 0) {
+        console.error("No se encontraron imágenes del carrusel.");
+        return;
+    }
+
+    let imagenActual = 0;
+    let intervalo;
+
+    function mostrarImagen(numero) {
+
+        imagenActual = (numero + slides.length) % slides.length;
+
+        slides.forEach((slide, index) => {
+            slide.classList.toggle("active", index === imagenActual);
+        });
+
+        indicadores.forEach((indicador, index) => {
+            indicador.classList.toggle("active", index === imagenActual);
+        });
+    }
+
+    function iniciarCarrusel() {
+        clearInterval(intervalo);
+
+        intervalo = setInterval(function () {
+            mostrarImagen(imagenActual + 1);
+        }, 5000);
+    }
+
+    if (btnAnterior) {
+        btnAnterior.addEventListener("click", function () {
+            mostrarImagen(imagenActual - 1);
+            iniciarCarrusel();
+        });
+    }
+
+    if (btnSiguiente) {
+        btnSiguiente.addEventListener("click", function () {
+            mostrarImagen(imagenActual + 1);
+            iniciarCarrusel();
+        });
+    }
+
+    indicadores.forEach((indicador, index) => {
+        indicador.addEventListener("click", function () {
+            mostrarImagen(index);
+            iniciarCarrusel();
+        });
+    });
+
+    mostrarImagen(0);
+    iniciarCarrusel();
+
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Registrar usuario | Sistema de Expedientes</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
+    <link
+    rel="stylesheet"
+    href="../public/css/styles.css"
+>
+
+   <link rel="stylesheet" href="../public/css/styles.css">
+<link rel="stylesheet" href="../public/css/gt10-visual.css">
+<link rel="stylesheet" href="../public/css/gt10-dashboard-premium.css">
+<link rel="stylesheet" href="../public/css/gt10-redesign.css">
+    >
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="gt10Sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+                <h5>Sistema de</h5>
+                <span>Expedientes</span>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-label">
+            MENÚ PRINCIPAL
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Inicio</span>
+            </a>
+
+            <a href="estudiantes.html" class="sidebar-link">
+                <i class="bi bi-people-fill"></i>
+                <span>Estudiantes</span>
+            </a>
+
+            <a href="matriculas.html" class="sidebar-link">
+                <i class="bi bi-journal-check"></i>
+                <span>Matrículas</span>
+            </a>
+
+            <a href="asignaturas.html" class="sidebar-link">
+                <i class="bi bi-book-fill"></i>
+                <span>Asignaturas</span>
+            </a>
+
+            <a href="calificaciones.html" class="sidebar-link">
+                <i class="bi bi-clipboard-data-fill"></i>
+                <span>Calificaciones</span>
+            </a>
+
+            <a href="estudiantes.html" class="sidebar-link">
+                <i class="bi bi-folder-fill"></i>
+                <span>Expedientes</span>
+            </a>
+
+            <a href="busqueda-avanzada.html" class="sidebar-link">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Documentos</span>
+            </a>
+
+            <a href="busqueda-avanzada.html" class="sidebar-link">
+                <i class="bi bi-search"></i>
+                <span>Búsqueda avanzada</span>
+            </a>
+
+            <a href="reportes.html" class="sidebar-link">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Reportes</span>
+            </a>
+
+
+            <div class="sidebar-label sidebar-section">
+                ADMINISTRACIÓN
+            </div>
+
+
+            <a href="usuarios.html" class="sidebar-link active">
+                <i class="bi bi-person-gear"></i>
+                <span>Usuarios</span>
+            </a>
+
+            <a href="historial.html" class="sidebar-link">
+                <i class="bi bi-clock-history"></i>
+                <span>Historial</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="sidebar-user-info">
+
+                    <strong>
+                        Administrador
+                    </strong>
+
+                    <span>
+                        Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="login.html"
+                class="logout-button"
+                title="Cerrar sesión"
+            >
+                <i class="bi bi-box-arrow-left"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    type="button"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <button
+    type="button"
+    id="toggleSidebar"
+    class="gt10-sidebar-toggle"
+    aria-controls="gt10Sidebar"
+    aria-expanded="true"
+    aria-label="Ocultar menú lateral"
+    title="Mostrar u ocultar menú"
+>
+    <i class="bi bi-layout-sidebar-inset"></i>
+</button>
+
+                <span class="header-title">
+                    Registrar usuario
+                </span>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    type="button"
+                    class="header-icon-button"
+                >
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="header-avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="student-breadcrumb">
+
+                <a href="dashboard.html">
+                    Inicio
+                </a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <a href="usuarios.html">
+                    Usuarios
+                </a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <strong>
+                    Nuevo usuario
+                </strong>
+
+            </div>
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="student-page-heading">
+
+                <div>
+
+                    <p class="page-eyebrow">
+                        ADMINISTRACIÓN
+                    </p>
+
+                    <h1>
+                        Registrar nuevo usuario
+                    </h1>
+
+                    <p>
+                        Crea una cuenta y define el nivel de
+                        acceso que tendrá dentro del sistema.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="usuarios.html"
+                    class="btn btn-outline-secondary"
+                >
+                    <i class="bi bi-arrow-left me-1"></i>
+                    Volver
+                </a>
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div
+                id="userMessage"
+                class="alert alert-success d-none"
+            >
+                <i class="bi bi-check-circle-fill me-2"></i>
+
+                Usuario registrado correctamente.
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <form id="userForm">
+
+
+                <!-- INFORMACIÓN DE CUENTA -->
+
+                <div class="form-panel">
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Información de la cuenta
+                            </h4>
+
+                            <p>
+                                Datos principales utilizados para
+                                identificar al usuario.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-md-6" id="userNameContainer">
+
+                            <label
+                                for="userName"
+                                class="form-label"
+                            >
+                                Nombre completo *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="userName"
+                                class="form-control"
+                                placeholder="Ej. Juan Carlos López"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6" id="userEmailContainer">
+
+                            <label
+                                for="userEmail"
+                                class="form-label"
+                            >
+                                Correo electrónico *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="userEmail"
+                                class="form-control"
+                                placeholder="usuario@correo.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="userPassword"
+                                class="form-label"
+                            >
+                                Contraseña provisional *
+                            </label>
+
+                            <div class="input-group">
+
+                                <input
+                                    type="password"
+                                    id="userPassword"
+                                    class="form-control"
+                                    placeholder="Mínimo 6 caracteres"
+                                    minlength="6"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-secondary"
+                                    id="togglePassword"
+                                    title="Mostrar contraseña"
+                                >
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="userConfirmPassword"
+                                class="form-label"
+                            >
+                                Confirmar contraseña *
+                            </label>
+
+                            <input
+                                type="password"
+                                id="userConfirmPassword"
+                                class="form-control"
+                                placeholder="Repite la contraseña"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="userRole"
+                                class="form-label"
+                            >
+                                Rol *
+                            </label>
+
+                            <select
+                                id="userRole"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecciona un rol
+                                </option>
+
+                                <option value="Administrador">
+                                    Administrador
+                                </option>
+
+                                <option value="Personal educativo">
+                                    Personal educativo
+                                </option>
+
+                                <option value="Estudiante">
+                                    Estudiante
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label
+                                for="userStatus"
+                                class="form-label"
+                            >
+                                Estado *
+                            </label>
+
+                            <select
+                                id="userStatus"
+                                class="form-select"
+                                required
+                            >
+
+                                <option value="Activo">
+                                    Activo
+                                </option>
+
+                                <option value="Inactivo">
+                                    Inactivo
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADMINISTRADOR -->
+
+                <div
+                    id="administratorInformation"
+                    class="form-panel mt-4 d-none"
+                >
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Acceso de administrador
+                            </h4>
+
+                            <p>
+                                Este usuario tendrá acceso completo
+                                a todos los módulos del sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert alert-primary mb-0">
+
+                        <i class="bi bi-info-circle-fill me-2"></i>
+
+                        El rol Administrador incluye automáticamente
+                        todos los permisos disponibles.
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERSONAL EDUCATIVO -->
+
+                <div
+                    id="staffPermissions"
+                    class="form-panel mt-4 d-none"
+                >
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Permisos del personal educativo
+                            </h4>
+
+                            <p>
+                                Selecciona las funciones que este
+                                usuario podrá realizar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ESTUDIANTES -->
+
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-people-fill me-2"></i>
+                            Estudiantes
+
+                        </h6>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="estudiantes.ver"
+                                        id="permissionStudentsView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionStudentsView"
+                                    >
+                                        Consultar estudiantes
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="estudiantes.crear"
+                                        id="permissionStudentsCreate"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionStudentsCreate"
+                                    >
+                                        Registrar estudiantes
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="estudiantes.editar"
+                                        id="permissionStudentsEdit"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionStudentsEdit"
+                                    >
+                                        Editar estudiantes
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MATRÍCULAS -->
+
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-journal-check me-2"></i>
+                            Matrículas
+
+                        </h6>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="matriculas.ver"
+                                        id="permissionEnrollmentsView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionEnrollmentsView"
+                                    >
+                                        Consultar matrículas
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="matriculas.crear"
+                                        id="permissionEnrollmentsCreate"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionEnrollmentsCreate"
+                                    >
+                                        Registrar matrículas
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXPEDIENTES -->
+
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-folder-fill me-2"></i>
+                            Expedientes y documentos
+
+                        </h6>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="expedientes.ver"
+                                        id="permissionRecordsView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionRecordsView"
+                                    >
+                                        Consultar expedientes
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="documentos.ver"
+                                        id="permissionDocumentsView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionDocumentsView"
+                                    >
+                                        Consultar documentos
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="documentos.crear"
+                                        id="permissionDocumentsCreate"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionDocumentsCreate"
+                                    >
+                                        Agregar documentos
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ASIGNATURAS -->
+
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-book-fill me-2"></i>
+                            Asignaturas
+
+                        </h6>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="asignaturas.ver"
+                                        id="permissionSubjectsView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionSubjectsView"
+                                    >
+                                        Consultar asignaturas
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="asignaturas.crear"
+                                        id="permissionSubjectsCreate"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionSubjectsCreate"
+                                    >
+                                        Administrar asignaturas
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CALIFICACIONES -->
+
+                    <div class="border rounded-3 p-3 mb-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-clipboard-data-fill me-2"></i>
+                            Calificaciones
+
+                        </h6>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="calificaciones.ver"
+                                        id="permissionGradesView"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionGradesView"
+                                    >
+                                        Consultar calificaciones
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input permission-checkbox"
+                                        type="checkbox"
+                                        value="calificaciones.crear"
+                                        id="permissionGradesCreate"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="permissionGradesCreate"
+                                    >
+                                        Registrar calificaciones
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+<!-- ANALÍTICA ACADÉMICA -->
+
+<div class="border rounded-3 p-3 mb-3">
+
+    <h6 class="mb-3">
+        <i class="bi bi-graph-up-arrow me-2"></i>
+        Analítica Académica
+    </h6>
+
+    <div class="form-check">
+
+        <input
+            class="form-check-input permission-checkbox"
+            type="checkbox"
+            value="analitica.ver"
+            id="permissionAnalyticsView"
+        >
+
+        <label
+            class="form-check-label"
+            for="permissionAnalyticsView"
+        >
+            Consultar analítica académica y alertas de rendimiento
+        </label>
+
+    </div>
+
+</div>
+
+
+                    <!-- REPORTES -->
+
+                    <div class="border rounded-3 p-3">
+
+                        <h6 class="mb-3">
+
+                            <i class="bi bi-bar-chart-fill me-2"></i>
+                            Reportes
+
+                        </h6>
+
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input permission-checkbox"
+                                type="checkbox"
+                                value="reportes.ver"
+                                id="permissionReportsView"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="permissionReportsView"
+                            >
+                                Consultar y generar reportes
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ESTUDIANTE -->
+
+                <div
+                    id="studentLinkSection"
+                    class="form-panel mt-4 d-none"
+                >
+
+                    <div class="form-panel-header">
+
+                        <div class="form-section-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Vincular estudiante
+                            </h4>
+
+                            <p>
+                                Relaciona esta cuenta con un estudiante
+                                registrado en el sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-md-8">
+
+                            <label
+                                for="linkedStudent"
+                                class="form-label"
+                            >
+                                Estudiante *
+                            </label>
+
+                            <select
+                                id="linkedStudent"
+                                class="form-select"
+                            >
+
+                                <option value="">
+                                    Selecciona un estudiante
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+    <label
+        for="studentAccessCode"
+        class="form-label"
+    >
+        Código de acceso
+    </label>
+
+    <input
+        type="text"
+        id="studentAccessCode"
+        class="form-control"
+        placeholder="Se obtiene automáticamente"
+        readonly
+    >
+
+</div>
+
+                    </div>
+
+
+                    <div class="alert alert-light border mt-4 mb-0">
+
+                        <i class="bi bi-shield-check me-2"></i>
+
+                        Esta cuenta tendrá acceso únicamente a la
+                        información del estudiante seleccionado.
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTONES -->
+
+                <div class="form-panel mt-4">
+
+                    <div
+                        class="d-flex justify-content-end gap-2 flex-wrap"
+                    >
+
+                        <a
+                            href="usuarios.html"
+                            class="btn btn-outline-secondary"
+                        >
+                            Cancelar
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            <i class="bi bi-person-check-fill me-1"></i>
+                            Guardar usuario
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="../public/js/app.js"></script>
+<script src="../public/js/gt10-sidebar.js"></script>
+<script src="../public/js/registrar-usuario.js"></script>
+
+</body>
+</html>

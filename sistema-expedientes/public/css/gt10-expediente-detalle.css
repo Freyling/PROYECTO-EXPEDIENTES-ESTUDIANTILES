@@ -1,0 +1,1552 @@
+
+/* =========================================
+   GT10 - EXPEDIENTE ESTUDIANTIL
+========================================= */
+
+/* Encabezado */
+
+.dashboard-body .student-page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.dashboard-body .student-page-heading h1 {
+    color: #fff;
+    font-weight: 800;
+}
+
+.dashboard-body .student-page-heading .btn {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-weight: 600;
+}
+
+.dashboard-body .student-page-heading .btn-outline-secondary {
+    border: 1px solid rgba(255,255,255,.45);
+    background: rgba(255,255,255,.14);
+    color: #fff;
+}
+
+.dashboard-body .student-page-heading .btn-outline-secondary:hover {
+    background: #fff;
+    color: #5142d4;
+}
+
+.dashboard-body .student-page-heading .btn-primary {
+    background: #fff;
+    border-color: #fff;
+    color: #5142d4;
+}
+
+/* Perfil principal */
+
+#recordContent .record-profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 30px;
+    border: 1px solid #e7eaf4;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(30,41,90,.06);
+}
+
+#recordContent .record-profile-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#recordContent .student-profile-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#6558f5,#3294ff);
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#recordContent #recordStudentName {
+    color: #172554;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+#recordContent .record-profile-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    color: #64748b;
+}
+
+#recordContent .record-profile-data i {
+    color: #6558f5;
+}
+
+#recordContent .record-status-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Tarjetas de estadísticas */
+
+#recordContent .record-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+#recordContent .record-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid #e8edf5;
+    border-radius: 22px;
+    background: #fff;
+    color: #172554;
+    box-shadow: 0 10px 28px rgba(30,41,90,.05);
+}
+
+#recordContent .record-stat-card .record-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: #e9e7ff;
+    color: #6558f5;
+    font-size: 25px;
+}
+
+#recordContent .record-stat-card:nth-child(2) .record-stat-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+#recordContent .record-stat-card:nth-child(3) .record-stat-icon {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+#recordContent .record-stat-card:nth-child(4) .record-stat-icon {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+#recordContent .record-stat-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+}
+
+#recordContent .record-stat-card strong {
+    display: block;
+    margin-top: 5px;
+    color: #0f172a;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* Paneles del expediente */
+
+#recordContent .form-panel {
+    padding: 30px;
+    border: 1px solid #e8edf5;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(30,41,90,.05);
+}
+
+#recordContent .form-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+#recordContent .form-section-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: #e9e7ff;
+    color: #6558f5;
+    font-size: 23px;
+}
+
+#recordContent .form-panel h4 {
+    margin: 0 0 5px;
+    color: #172554;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+#recordContent .form-panel-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Datos personales */
+
+#recordContent .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 18px;
+}
+
+#recordContent .detail-item {
+    padding: 18px 20px;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+#recordContent .detail-item-wide {
+    grid-column: 1 / -1;
+}
+
+#recordContent .detail-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+#recordContent .detail-item strong {
+    color: #172554;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Encabezados con acciones */
+
+#recordContent .record-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+#recordContent .record-section-heading .btn {
+    border-radius: 11px;
+    padding: 10px 16px;
+    font-weight: 600;
+}
+
+/* Tablas */
+
+#recordContent .table {
+    width: 100%;
+}
+
+#recordContent .table thead th {
+    padding: 15px;
+    background: #f3f3ff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#recordContent .table tbody td {
+    padding: 15px;
+    color: #334155;
+    font-size: 14px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+/* Estados vacíos */
+
+#recordContent .record-empty-box {
+    padding: 36px 20px;
+    border: 1px dashed #d8def0;
+    border-radius: 18px;
+    background: #fafbff;
+    text-align: center;
+}
+
+#recordContent .record-empty-icon {
+    margin-bottom: 14px;
+    color: #6558f5;
+    font-size: 34px;
+}
+
+#recordContent .record-empty-box h5 {
+    color: #172554;
+    font-weight: 700;
+}
+
+#recordContent .record-empty-box p {
+    color: #64748b;
+}
+
+/* Menú plegable */
+
+@media (min-width: 769px) {
+    body.dashboard-body.gt10-menu-hidden #gt10Sidebar {
+        transform: translateX(-110%) !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body.dashboard-body.gt10-menu-hidden .dashboard-main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.dashboard-body:not(.gt10-menu-hidden) #gt10Sidebar {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    #recordContent .record-stat-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-body .student-page-heading,
+    #recordContent .record-profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #recordContent .record-status-area {
+        align-items: flex-start;
+    }
+
+    #recordContent .record-stat-grid,
+    #recordContent .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #recordContent .detail-item-wide {
+        grid-column: auto;
+    }
+
+    #recordContent .form-panel {
+        padding: 20px;
+    }
+}
+
+/* GT10 - Tarjetas académicas mejoradas */
+
+#recordContent .record-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+}
+
+#recordContent .record-stat-grid .record-stat-card {
+    position: relative;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center;
+    min-height: 180px;
+    padding: 25px !important;
+    border: 1px solid #e8eafb !important;
+    border-radius: 22px;
+    background: #ffffff !important;
+    color: #172554 !important;
+    box-shadow: 0 12px 30px rgba(40, 45, 100, .07);
+    overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+}
+
+#recordContent .record-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(40, 45, 100, .13);
+}
+
+#recordContent .record-stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #6558f5;
+}
+
+#recordContent .record-stat-card:nth-child(2)::before {
+    background: #3294ff;
+}
+
+#recordContent .record-stat-card:nth-child(3)::before {
+    background: #18c8b4;
+}
+
+#recordContent .record-stat-card:nth-child(4)::before {
+    background: #ff7398;
+}
+
+#recordContent .record-stat-card .record-stat-icon {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    border-radius: 15px;
+    background: #eeebff !important;
+    color: #6558f5 !important;
+    font-size: 24px;
+}
+
+#recordContent .record-stat-card span {
+    display: block !important;
+    color: #64748b !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#recordContent .record-stat-card strong {
+    display: block !important;
+    margin-top: 5px;
+    color: #111b40 !important;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+    #recordContent .record-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #recordContent .record-stat-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   GT10 - NAVEGACIÓN DEL EXPEDIENTE
+======================================== */
+
+.gt10-record-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin: 28px 0 8px;
+    border: 1px solid #e6e9f8;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 35px rgba(41, 45, 110, 0.07);
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.gt10-record-nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-shrink: 0;
+    padding: 13px 17px;
+    border-radius: 13px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background .25s, color .25s, transform .25s;
+}
+
+.gt10-record-nav-link i {
+    font-size: 18px;
+}
+
+.gt10-record-nav-link:hover {
+    background: #f0edff;
+    color: #5845e8;
+    transform: translateY(-2px);
+}
+
+.gt10-record-nav-link.active {
+    background: linear-gradient(115deg, #6558f5, #3294ff);
+    color: #ffffff;
+    box-shadow: 0 7px 18px rgba(101, 88, 245, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#seccion-datos,
+#seccion-matriculas,
+#seccion-calificaciones,
+#seccion-registros,
+#seccion-documentos,
+#seccion-actividad {
+    scroll-margin-top: 105px;
+}
+
+@media (max-width: 768px) {
+    .gt10-record-nav {
+        gap: 6px;
+        padding: 9px;
+        border-radius: 15px;
+    }
+
+    .gt10-record-nav-link {
+        padding: 11px 13px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   GT10 - DATOS GENERALES
+======================================== */
+
+#seccion-datos.gt10-personal-panel {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+#seccion-datos .gt10-personal-group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 28px 0 17px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9ecf5;
+    color: #27376b;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#seccion-datos .gt10-personal-group-title i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: #eeebff;
+    color: #6558f5;
+    font-size: 18px;
+}
+
+#seccion-datos .gt10-personal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+#seccion-datos .gt10-personal-grid .detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e9ecf5;
+    border-radius: 16px;
+    background: #f8faff;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+#seccion-datos .gt10-personal-grid .detail-item:hover {
+    border-color: #c9c4ff;
+    box-shadow: 0 6px 20px rgba(80, 75, 160, .06);
+}
+
+#seccion-datos .gt10-personal-grid .detail-item span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #71809d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#seccion-datos .gt10-personal-grid .detail-item span i {
+    color: #6558f5;
+    font-size: 16px;
+}
+
+#seccion-datos .gt10-personal-grid .detail-item strong {
+    color: #18264b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#seccion-datos .gt10-personal-grid .detail-item-wide {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 700px) {
+    #seccion-datos.gt10-personal-panel {
+        padding: 20px;
+    }
+
+    #seccion-datos .gt10-personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #seccion-datos .gt10-personal-grid .detail-item-wide {
+        grid-column: auto;
+    }
+}
+
+/* ==========================================
+   GT10 - TRAYECTORIA ACADÉMICA
+========================================== */
+
+#seccion-matriculas {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+#seccion-matriculas .form-panel-header {
+    padding-bottom: 22px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+#seccion-matriculas .table-responsive {
+    border: 1px solid #e7ebf5;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+#seccion-matriculas table {
+    width: 100%;
+    margin: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#seccion-matriculas thead th {
+    padding: 18px 20px;
+    background: #f2f4ff;
+    color: #53638a;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    border-bottom: 1px solid #e7ebf5;
+    white-space: nowrap;
+}
+
+#seccion-matriculas tbody td {
+    padding: 21px 20px;
+    color: #26365c;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #edf0f7;
+    vertical-align: middle;
+}
+
+#seccion-matriculas tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#seccion-matriculas tbody tr:hover td {
+    background: #f8faff;
+}
+
+#seccion-matriculas tbody td:first-child strong {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border-radius: 11px;
+    background: #eeebff;
+    color: #5d4de0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#seccion-matriculas .badge {
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#seccion-matriculas .badge.bg-success {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+#seccion-matriculas .badge.bg-primary {
+    background: #e0e7ff !important;
+    color: #4338ca !important;
+}
+
+#seccion-matriculas .badge.bg-danger {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+#seccion-matriculas .badge.bg-secondary {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+}
+
+@media (max-width: 768px) {
+    #seccion-matriculas {
+        padding: 20px;
+    }
+
+    #seccion-matriculas thead th,
+    #seccion-matriculas tbody td {
+        padding: 15px 12px;
+    }
+}
+
+/* ============================================
+   GT10 - CALIFICACIONES ACADÉMICAS
+============================================ */
+
+#seccion-calificaciones {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+/* ENCABEZADO PRINCIPAL */
+
+#seccion-calificaciones .record-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+#seccion-calificaciones .record-section-heading .form-panel-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#seccion-calificaciones .record-section-heading .btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(115deg, #6558f5, #3294ff);
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 8px 18px rgba(101, 88, 245, .16);
+}
+
+/* CONTENEDOR DE CADA AÑO */
+
+#seccion-calificaciones #gradeContent > .mb-4 {
+    margin-bottom: 28px !important;
+    padding: 22px;
+    border: 1px solid #e8ebf6;
+    border-radius: 20px;
+    background: #fbfcff;
+}
+
+/* ENCABEZADO DEL AÑO LECTIVO */
+
+#seccion-calificaciones #gradeContent > .mb-4 > .d-flex {
+    padding: 17px 20px;
+    margin-bottom: 20px !important;
+    border-radius: 15px;
+    background: linear-gradient(115deg, #f0edff, #eaf4ff);
+}
+
+#seccion-calificaciones #gradeContent > .mb-4 > .d-flex h5 {
+    color: #26376b;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+#seccion-calificaciones #gradeContent > .mb-4 > .d-flex h5 i {
+    color: #6558f5;
+}
+
+#seccion-calificaciones #gradeContent > .mb-4 > .d-flex .text-muted {
+    color: #64748b !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* TARJETA DEL SEMESTRE */
+
+#seccion-calificaciones #gradeContent .border.rounded-3 {
+    padding: 22px !important;
+    border: 1px solid #e6e9f5 !important;
+    border-radius: 17px !important;
+    background: #ffffff;
+    box-shadow: 0 8px 22px rgba(40, 45, 100, .04);
+}
+
+#seccion-calificaciones #gradeContent .border.rounded-3 h6 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px !important;
+    color: #293a72;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#seccion-calificaciones #gradeContent .border.rounded-3 h6 i {
+    color: #6558f5;
+    font-size: 20px;
+}
+
+/* TABLA DE CALIFICACIONES */
+
+#seccion-calificaciones #gradeContent .table-responsive {
+    border: 1px solid #e8ebf5;
+    border-radius: 14px;
+    overflow-x: auto;
+}
+
+#seccion-calificaciones #gradeContent table {
+    width: 100%;
+    margin: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#seccion-calificaciones #gradeContent thead th {
+    padding: 17px 16px;
+    background: #f0f2ff;
+    color: #53638a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 1px solid #e8ebf5;
+}
+
+#seccion-calificaciones #gradeContent tbody td {
+    padding: 20px 16px;
+    color: #26365c;
+    font-size: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf0f7;
+}
+
+#seccion-calificaciones #gradeContent tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#seccion-calificaciones #gradeContent tbody tr:hover td {
+    background: #f8faff;
+}
+
+/* NOMBRE DE LA ASIGNATURA */
+
+#seccion-calificaciones #gradeContent tbody td:first-child strong {
+    color: #172554;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#seccion-calificaciones #gradeContent tbody td:first-child .small {
+    margin-top: 5px;
+    color: #8290ac !important;
+    font-size: 12px;
+}
+
+/* NOTAS NUMÉRICAS */
+
+#seccion-calificaciones #gradeContent tbody td:nth-child(2) strong,
+#seccion-calificaciones #gradeContent tbody td:nth-child(3) strong,
+#seccion-calificaciones #gradeContent tbody td:nth-child(4) strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    padding: 9px 12px;
+    border-radius: 11px;
+    background: #eeebff;
+    color: #5845df;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* ESTADOS */
+
+#seccion-calificaciones #gradeContent .badge {
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#seccion-calificaciones #gradeContent .badge.bg-success {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+#seccion-calificaciones #gradeContent .badge.bg-danger {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+#seccion-calificaciones #gradeContent .badge.bg-secondary {
+    background: #e9edf5 !important;
+    color: #52627d !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    #seccion-calificaciones {
+        padding: 20px;
+    }
+
+    #seccion-calificaciones .record-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #seccion-calificaciones #gradeContent > .mb-4 {
+        padding: 14px;
+    }
+
+    #seccion-calificaciones #gradeContent .border.rounded-3 {
+        padding: 14px !important;
+    }
+
+    #seccion-calificaciones #gradeContent thead th,
+    #seccion-calificaciones #gradeContent tbody td {
+        padding: 14px 12px;
+    }
+}
+
+/* ============================================
+   GT10 - REGISTROS ACADÉMICOS ANTERIORES
+============================================ */
+
+#seccion-registros {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+/* ENCABEZADO */
+
+#seccion-registros .record-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+#seccion-registros .record-section-heading .form-panel-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* BOTÓN AGREGAR REGISTRO */
+
+#seccion-registros #addAcademicRecordButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 18px;
+    border: 1px solid #d8d3ff;
+    border-radius: 12px;
+    background: #f0edff;
+    color: #5c4de0;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all .2s ease;
+}
+
+#seccion-registros #addAcademicRecordButton:hover {
+    background: #6558f5;
+    border-color: #6558f5;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(101, 88, 245, .18);
+}
+
+/* CONTENEDOR DE LA TABLA */
+
+#seccion-registros #academicRecordTableContainer {
+    border: 1px solid #e7ebf5;
+    border-radius: 18px;
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+/* TABLA */
+
+#seccion-registros table {
+    width: 100%;
+    margin: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* ENCABEZADOS DE COLUMNAS */
+
+#seccion-registros thead th {
+    padding: 18px 20px;
+    background: #f0f2ff;
+    color: #53638a;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e7ebf5;
+}
+
+/* FILAS */
+
+#seccion-registros tbody td {
+    padding: 21px 20px;
+    color: #26365c;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf0f7;
+}
+
+#seccion-registros tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#seccion-registros tbody tr:hover td {
+    background: #f8faff;
+}
+
+/* AÑO ACADÉMICO */
+
+#seccion-registros tbody td:first-child strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 66px;
+    padding: 9px 13px;
+    border-radius: 11px;
+    background: #eeebff;
+    color: #5845df;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* ASIGNATURA */
+
+#seccion-registros tbody td:nth-child(4) {
+    color: #172554;
+    font-weight: 700;
+}
+
+/* CALIFICACIÓN */
+
+#seccion-registros tbody td:nth-child(5) strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    padding: 9px 12px;
+    border-radius: 11px;
+    background: #eaf4ff;
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* ESTADOS */
+
+#seccion-registros .badge {
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#seccion-registros .badge.bg-success {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+#seccion-registros .badge.bg-danger {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+#seccion-registros .badge.bg-warning {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+}
+
+#seccion-registros .badge.bg-secondary {
+    background: #e9edf5 !important;
+    color: #52627d !important;
+}
+
+/* ESTADO SIN REGISTROS */
+
+#seccion-registros #academicRecordEmpty {
+    padding: 38px 20px;
+    border: 1px dashed #dce2f1;
+    border-radius: 18px;
+    background: #f9faff;
+    text-align: center;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    #seccion-registros {
+        padding: 20px;
+    }
+
+    #seccion-registros .record-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #seccion-registros thead th,
+    #seccion-registros tbody td {
+        padding: 15px 12px;
+    }
+
+    #seccion-registros #addAcademicRecordButton {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   GT10 - DOCUMENTOS DIGITALES
+============================================ */
+
+#seccion-documentos {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+/* ENCABEZADO */
+
+#seccion-documentos .record-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+#seccion-documentos .record-section-heading .form-panel-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* BOTÓN AGREGAR DOCUMENTO */
+
+#seccion-documentos #addDocumentButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 1px solid #d8d3ff;
+    border-radius: 12px;
+    background: #f0edff;
+    color: #5c4de0;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all .2s ease;
+}
+
+#seccion-documentos #addDocumentButton:hover {
+    background: #6558f5;
+    border-color: #6558f5;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(101, 88, 245, .18);
+}
+
+/* CONTENEDOR DE LA TABLA */
+
+#seccion-documentos #documentTableContainer {
+    border: 1px solid #e7ebf5;
+    border-radius: 18px;
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+/* TABLA */
+
+#seccion-documentos table {
+    width: 100%;
+    margin: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* ENCABEZADOS */
+
+#seccion-documentos thead th {
+    padding: 18px 20px;
+    background: #f0f2ff;
+    color: #53638a;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e7ebf5;
+}
+
+/* FILAS */
+
+#seccion-documentos tbody td {
+    padding: 21px 20px;
+    color: #26365c;
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf0f7;
+}
+
+#seccion-documentos tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#seccion-documentos tbody tr:hover td {
+    background: #f8faff;
+}
+
+/* NOMBRE DEL DOCUMENTO */
+
+#seccion-documentos tbody td:first-child strong {
+    color: #172554;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* TIPO DE DOCUMENTO */
+
+#seccion-documentos tbody td:nth-child(2) {
+    color: #52627d;
+    font-weight: 600;
+}
+
+/* ARCHIVO ADJUNTO */
+
+#seccion-documentos tbody td:nth-child(3) {
+    color: #5845df;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+#seccion-documentos tbody td:nth-child(3) i {
+    color: #6558f5;
+    font-size: 17px;
+}
+
+/* FECHA */
+
+#seccion-documentos tbody td:nth-child(4) {
+    color: #64748b;
+    white-space: nowrap;
+}
+
+/* ESTADOS */
+
+#seccion-documentos .badge {
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#seccion-documentos .badge.bg-success {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+#seccion-documentos .badge.bg-warning {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+}
+
+#seccion-documentos .badge.bg-danger {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+#seccion-documentos .badge.bg-secondary {
+    background: #e9edf5 !important;
+    color: #52627d !important;
+}
+
+/* SIN DOCUMENTOS */
+
+#seccion-documentos #documentEmpty {
+    padding: 38px 20px;
+    border: 1px dashed #dce2f1;
+    border-radius: 18px;
+    background: #f9faff;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    #seccion-documentos {
+        padding: 20px;
+    }
+
+    #seccion-documentos .record-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #seccion-documentos #addDocumentButton {
+        width: 100%;
+    }
+
+    #seccion-documentos thead th,
+    #seccion-documentos tbody td {
+        padding: 15px 12px;
+    }
+}
+
+/* ============================================
+   GT10 - ACTIVIDAD DEL EXPEDIENTE
+============================================ */
+
+#seccion-actividad {
+    padding: 30px;
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+/* ENCABEZADO */
+
+#seccion-actividad .form-panel-header {
+    padding-bottom: 22px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+/* CONTENEDOR DEL HISTORIAL */
+
+#seccion-actividad #recordActivityList {
+    position: relative;
+    padding: 5px 0 5px 12px;
+}
+
+/* LÍNEA VERTICAL */
+
+#seccion-actividad #recordActivityList:has(.record-activity)::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    bottom: 28px;
+    left: 39px;
+    width: 3px;
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        #6558f5,
+        #3294ff,
+        #dce5ff
+    );
+}
+
+/* CADA ACTIVIDAD */
+
+#seccion-actividad .record-activity {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 18px;
+    padding: 20px;
+    border: 1px solid #e7ebf5;
+    border-radius: 17px;
+    background: #fbfcff;
+    transition: transform .2s, box-shadow .2s;
+}
+
+#seccion-actividad .record-activity:last-child {
+    margin-bottom: 0;
+}
+
+#seccion-actividad .record-activity:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 24px rgba(40, 45, 100, .07);
+}
+
+/* ICONO DE LA ACTIVIDAD */
+
+#seccion-actividad .record-activity-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    border: 4px solid #ffffff;
+    border-radius: 16px;
+    background: #eeebff;
+    color: #6558f5;
+    font-size: 21px;
+    box-shadow: 0 4px 12px rgba(101, 88, 245, .10);
+}
+
+/* TÍTULO */
+
+#seccion-actividad .record-activity strong {
+    display: block;
+    margin: 2px 0 7px;
+    color: #172554;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* DESCRIPCIÓN */
+
+#seccion-actividad .record-activity p {
+    margin-bottom: 9px !important;
+    color: #52627d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FECHA Y USUARIO */
+
+#seccion-actividad .record-activity small {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 9px;
+    background: #f0f2ff;
+    color: #64748b !important;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* DIFERENCIAR LOS ICONOS POR ACTIVIDAD */
+
+#seccion-actividad .record-activity:has(.bi-person-plus-fill)
+.record-activity-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+#seccion-actividad .record-activity:has(.bi-pencil-fill)
+.record-activity-icon {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+#seccion-actividad .record-activity:has(.bi-file-earmark-plus-fill)
+.record-activity-icon {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+#seccion-actividad .record-activity:has(.bi-clipboard-check-fill)
+.record-activity-icon {
+    background: #eeebff;
+    color: #6558f5;
+}
+
+#seccion-actividad .record-activity:has(.bi-journal-check)
+.record-activity-icon {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+
+/* CUANDO NO EXISTE ACTIVIDAD */
+
+#seccion-actividad #recordActivityList:not(:has(.record-activity))
+.record-empty-box {
+    padding: 42px 20px;
+    border: 1px dashed #dce2f1;
+    border-radius: 18px;
+    background: #f9faff;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    #seccion-actividad {
+        padding: 20px;
+    }
+
+    #seccion-actividad #recordActivityList {
+        padding-left: 0;
+    }
+
+    #seccion-actividad #recordActivityList:has(.record-activity)::before {
+        left: 27px;
+    }
+
+    #seccion-actividad .record-activity {
+        gap: 13px;
+        padding: 15px;
+    }
+
+    #seccion-actividad .record-activity-icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+}
+
